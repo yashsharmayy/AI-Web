@@ -1,0 +1,6 @@
+{
+  "name": "Creative Agency Website",
+  "description": "A premium, highly interactive, and cinematic creative agency website inspired by Awwwards winners, featuring beautiful scroll animations, custom hero background, services showcase, and sleek design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
