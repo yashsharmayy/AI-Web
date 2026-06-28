@@ -15,8 +15,9 @@ import Footer from './components/Footer.jsx';
 
 export default function App() {
   return (
+
     <div id="root-app-container" className="relative bg-[#050505] text-[#F5F5F5] selection:bg-red-600 selection:text-white overflow-x-hidden min-h-screen">
-      {/* 1. Transparent Floating Sticky Navbar */}
+      {/* 1.  Transparent Floating Sticky Navbar */}
       <Navbar />
 
       {/* 2. Fullscreen Background Video Cinematic Hero */}
