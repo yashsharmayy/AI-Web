@@ -9,6 +9,7 @@ import { LoaderProvider } from "./context/LoaderContext";
 import { IntroLoader } from "./components/loading/IntroLoader";
 import { AuthModal } from "./components/ui/AuthModal";
 import AdminRoute from "./pages/adminRoute";
+import ResetPassword from "./pages/ResetPassword";
 const HomePage = lazy(() => import("./pages/HomePage").then((m) => ({ default: m.HomePage })));
 const ServicesPage = lazy(() => import("./pages/ServicesPage").then((m) => ({ default: m.ServicesPage })));
 const ServiceDetailPage = lazy(() => import("./pages/ServiceDetailPage").then((m) => ({ default: m.ServiceDetailPage })));
@@ -67,6 +68,7 @@ export default function App() {
                       </AdminRoute>
                     }
                   />
+                  <Route path="/reset-password/:token" element={<ResetPassword />} />
                   <Route path="*" element={<HomePage />} />
                 </Routes>
               </Suspense>
