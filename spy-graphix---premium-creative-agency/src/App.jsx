@@ -68,7 +68,10 @@ export default function App() {
                       </AdminRoute>
                     }
                   />
-                  <Route path="/reset-password/:token" element={<ResetPassword />} />
+                  <Route path="/reset-password/:token" element={<ResetPassword />}
+
+
+                  />
                   <Route path="*" element={<HomePage />} />
                 </Routes>
               </Suspense>

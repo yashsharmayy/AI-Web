@@ -11,7 +11,7 @@ import { connectDB } from "./backend/config/database.js";
 import { uploadToCloudinaryMock } from "./backend/config/cloudinary.js";
 import { upload } from "./backend/middleware/upload.middleware.js";
 import { errorHandler } from "./backend/middleware/error.middleware.js";
-import { verifyMailConnection } from "./backend/utils/sendMail.js";
+import { sendMail, verifyMailConnection } from "./backend/utils/sendMail.js";
 
 import authRoutes from "./backend/routes/auth.routes.js";
 import userRoutes from "./backend/routes/user.routes.js";
@@ -170,6 +170,32 @@ Task: Generate an elevated ${type || "creative concept"} for: "${prompt}"`,
   app.use("/api/analytics", analyticsRoutes);
   app.use("/api/categories", categoryRoutes);
   app.use("/api/media", mediaRoutes);
+
+  app.get("/test-email", async (req, res) => {
+    try {
+      const result = await sendMail({
+        to: process.env.ADMIN_EMAIL,
+        subject: "SPY GRAPHIX Test Email",
+        text: "This is a test email from the SPY GRAPHIX backend.",
+        html: `
+        <h2>SPY GRAPHIX Test</h2>
+        <p>Your email system is working correctly.</p>
+      `,
+      });
+
+      res.json({
+        success: true,
+        result,
+      });
+    } catch (error) {
+      console.error("TEST EMAIL ERROR:", error);
+
+      res.status(500).json({
+        success: false,
+        error: error.message,
+      });
+    }
+  });
 
   // Error handler
   app.use(errorHandler);

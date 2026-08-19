@@ -25,27 +25,69 @@ export function ContactPage() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !email || !message) return;
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
     setLoading(true);
     setSuccess(false);
+
     try {
+      const payload = {
+        name: name.trim(),
+        email: email.trim(),
+        company: company.trim(),
+        service,
+        budget,
+        message: message.trim(),
+      };
+
+      console.log("📩 Sending contact:", payload);
+
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, company, service, budget, message })
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
+
+      console.log("📡 Status:", res.status);
+
       const data = await res.json();
-      if (data.success) {
-        setSuccess(true);
-        setName("");
-        setEmail("");
-        setCompany("");
-        setMessage("");
+
+      console.log("📨 Response:", data);
+
+      if (!res.ok) {
+        throw new Error(
+          data?.error || `Request failed with status ${res.status}`
+        );
       }
-    } catch (err) {
-      alert("Failed to send message.");
+
+      if (!data.success) {
+        throw new Error(data?.error || "Contact submission failed.");
+      }
+
+      setSuccess(true);
+
+      setName("");
+      setEmail("");
+      setCompany("");
+      setMessage("");
+      setService("Website & UI");
+      setBudget("$5,000 - $10,000");
+
+    } catch (error) {
+      console.error("❌ CONTACT ERROR:", error);
+
+      alert(error.message || "Failed to send message.");
+
     } finally {
       setLoading(false);
     }
@@ -73,7 +115,7 @@ export function ContactPage() {
       {
         /* Interactive Contact Form */
       }
-      <div className="lg:col-span-7 bg-[#FFFFFF] rounded-[32px] p-8 md:p-12 border border-black/8 shadow-soft space-y-8">
+      <div className="lg:col-span-7 bg-[#FFFFFF] rounded-4xl p-8 md:p-12 border border-black/8 shadow-soft space-y-8">
         <div className="border-b border-black/6 pb-4">
           <h3 className="text-2xl font-bold font-syne text-[#111111]">Project Inquiry Form</h3>
           <p className="text-xs text-[#777777]">Select services and budget tier for rapid proposal scoping.</p>
@@ -199,14 +241,14 @@ export function ContactPage() {
         {
           /* WhatsApp Direct Connect */
         }
-        <div className="bg-[#111111] text-white p-8 rounded-[32px] space-y-4 shadow-xl">
+        <div className="bg-[#111111] text-white p-8 rounded-4xl space-y-4 shadow-xl">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF3B30]">Fast Response Line</span>
           <h3 className="text-2xl font-bold font-syne">Need Instant Consultation?</h3>
           <p className="text-xs text-white/60 leading-relaxed">
             Connect directly with our creative team on WhatsApp for immediate feedback on dieline specs or custom quote estimates.
           </p>
           <a
-            href="https://wa.me/41441234567"
+            href="https://wa.me/8750634117"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-xs uppercase px-6 py-3.5 rounded-2xl transition-all shadow-md"
@@ -218,7 +260,7 @@ export function ContactPage() {
         {
           /* Interactive Google Map Mockup */
         }
-        <div className="bg-[#FFFFFF] rounded-[32px] p-6 border border-black/8 shadow-soft space-y-4">
+        <div className="bg-[#FFFFFF] rounded-4xl p-6 border border-black/8 shadow-soft space-y-4">
           <div className="flex items-center justify-between">
             <h4 className="text-sm font-bold font-syne text-[#111111] flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#FF3B30]" /> Interactive Studio Locations
@@ -226,7 +268,7 @@ export function ContactPage() {
             <span className="text-[10px] font-bold uppercase text-[#777777]">India • Mumbai</span>
           </div>
 
-          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-[#E8E8E8] border border-black/8 flex items-center justify-center">
+          <div className="relative aspect-16/10 rounded-2xl overflow-hidden bg-[#E8E8E8] border border-black/8 flex items-center justify-center">
             <img
               src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80"
               alt="Map View"
@@ -244,7 +286,7 @@ export function ContactPage() {
 
           <div className="space-y-3 pt-2 text-xs text-[#555555]">
             <div className="flex items-start gap-3">
-              <Mail className="w-4 h-4 text-[#FF3B30] flex-shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-[#111111]">Executive Email</p>
                 <a href="mailto:hello@spygraphix.com" className="hover:text-[#FF3B30]">hello@spygraphix.com</a>
@@ -252,7 +294,7 @@ export function ContactPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Phone className="w-4 h-4 text-[#FF3B30] flex-shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-[#111111]">Studio Telephone</p>
                 <p>+41 44 210 8080 (India)</p>
