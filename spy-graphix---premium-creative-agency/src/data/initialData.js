@@ -48,37 +48,43 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "Identity Essentials",
-        price: "$2,800",
+        tier: "Logo Starter",
+        price: "₹5,999",
         features: [
-          "Primary Logo & Variants",
-          "Brand Color & Type Guide",
-          "Business Card Design",
+          "3 Logo Concepts",
+          "Primary Logo",
+          "Logo Variations",
+          "Color Palette",
           "2 Revisions",
-          "10-Day Delivery",
         ],
       },
       {
-        tier: "Complete Studio Brand",
-        price: "$5,500",
+        tier: "Complete Brand Identity",
+        price: "₹24,999",
         features: [
-          "Complete Identity System",
-          "100+ Page Brand Guidelines",
-          "Full Corporate Stationery",
-          "Social Media Templates",
+          "Logo Design",
+          "Brand Identity",
+          "Typography System",
+          "Color System",
+          "Business Card",
+          "Letterhead",
+          "Brand Guidelines",
+          "Social Media Kit",
           "3 Revisions",
-          "20-Day Delivery",
         ],
       },
       {
-        tier: "Enterprise Identity",
-        price: "$9,800",
+        tier: "Premium Brand System",
+        price: "₹59,999",
         features: [
-          "Global Brand Strategy",
-          "3D Motion Logo",
-          "Custom Type Design",
-          "Complete Print & Digital Assets",
-          "Dedicated Creative Director",
+          "Complete Brand Identity",
+          "Advanced Brand Guidelines",
+          "Corporate Stationery",
+          "Company Profile",
+          "Social Media Kit",
+          "Marketing Assets",
+          "AI Creative Assets",
+          "Dedicated Designer",
         ],
       },
     ],
@@ -90,6 +96,26 @@ export const INITIAL_SERVICES = [
     ],
     heroImage:
       "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
+    gallery: [
+      {
+        image:
+          "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1000&q=80",
+        title: "Brand Identity",
+        category: "Logo & Identity",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1000&q=80",
+        title: "Stationery System",
+        category: "Print Design",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80",
+        title: "Visual Identity",
+        category: "Branding",
+      },
+    ],
     featured: true,
   },
   {
@@ -136,23 +162,51 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "Starter Feed Pack",
-        price: "$1,200/mo",
+        tier: "Starter Social Pack",
+        price: "₹9,999/month",
         features: [
-          "12 Custom Posts/Carousels",
-          "4 Story Assets",
-          "2 YouTube Thumbnails",
-          "Source Files",
+          "12 Social Media Posts",
+          "2 Story Designs",
+          "1 Banner",
+          "Basic Photo Editing",
+          "Basic AI Image Enhancement",
+          "2 Design Revisions",
+          "24–48 Hour Delivery",
         ],
       },
       {
-        tier: "Growth Social Engine",
-        price: "$2,400/mo",
+        tier: "Professional Social Pack",
+        price: "₹19,999/month",
         features: [
-          "24 Custom Posts/Carousels",
-          "10 Story Assets",
-          "Ad Creative Variants",
-          "Figma Template Kit",
+          "20 Social Media Posts",
+          "6 Story Designs",
+          "2 Carousel Posts",
+          "2 Promotional Posters",
+          "1 Flyer/Brochure",
+          "2 AI Creative Visuals",
+          "2 Basic Motion Graphics",
+          "1 Reel Editing",
+          "Premium Photo Editing",
+          "Unlimited Minor Revisions",
+        ],
+      },
+      {
+        tier: "Premium Social Pack",
+        price: "₹34,999/month",
+        features: [
+          "30 Social Media Posts",
+          "10 Story Designs",
+          "4 Carousel Posts",
+          "4 Posters",
+          "2 Brochures/Flyers",
+          "2 Banner Designs",
+          "4 Motion Graphics",
+          "4 Reel Editing",
+          "AI Product Mockups",
+          "AI Image Generation",
+          "Product Retouching",
+          "Priority Support",
+          "Unlimited Revisions",
         ],
       },
     ],
@@ -164,6 +218,46 @@ export const INITIAL_SERVICES = [
     ],
     heroImage:
       "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80",
+    // Social Media Design
+
+    gallery: [
+      {
+        image:
+          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1000&q=80",
+        title: "Social Campaign",
+        category: "Social Media",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1000&q=80",
+        title: "Instagram Campaign",
+        category: "Instagram",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1000&q=80",
+        title: "Content System",
+        category: "Content Design",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1000&q=80",
+        title: "Social Campaign",
+        category: "Social Media",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1000&q=80",
+        title: "Instagram Campaign",
+        category: "Instagram",
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1000&q=80",
+        title: "Content System",
+        category: "Content Design",
+      },
+    ],
     featured: true,
   },
   {
@@ -209,23 +303,34 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "Single SKU Package",
-        price: "$2,200",
+        tier: "Label Design",
+        price: "₹2,000 – ₹5,000",
         features: [
-          "1 Product Box/Label",
-          "Custom Dieline Creation",
-          "3D Renders (4 Angles)",
-          "Print Specs",
+          "Label Design",
+          "Print Ready Files",
+          "CMYK Setup",
+          "2 Revisions",
         ],
       },
       {
-        tier: "Product Line System",
-        price: "$4,800",
+        tier: "Pouch Design",
+        price: "₹4,000 – ₹8,000",
         features: [
-          "Up to 5 SKU Variations",
-          "Unboxing Tissue/Insert",
-          "3D Photorealistic Video",
-          "Factory Coordination",
+          "Complete Pouch Artwork",
+          "Print Ready Dieline",
+          "Mockup",
+          "Source Files",
+        ],
+      },
+      {
+        tier: "Box Design",
+        price: "₹5,000 – ₹12,000",
+        features: [
+          "Box Design",
+          "Custom Dieline",
+          "3D Mockup",
+          "Print Ready Files",
+          "Source Files",
         ],
       },
     ],
@@ -281,23 +386,38 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "Landing Page Experience",
-        price: "$3,500",
+        tier: "Landing Page",
+        price: "₹12,000 – ₹20,000",
         features: [
-          "Hero 3D Interaction",
-          "Responsive Mobile Layout",
-          "Figma Prototype",
-          "CMS Ready",
+          "UI Design",
+          "Mobile Responsive Layout",
+          "Up to 5 Sections",
+          "Figma Design",
+          "2 Revisions",
         ],
       },
       {
-        tier: "Full Brand Web App",
-        price: "$7,800",
+        tier: "Business Website",
+        price: "₹25,000 – ₹45,000",
         features: [
-          "Up to 10 Custom Views",
-          "Interactive R3F Scene",
-          "Design System",
-          "SEO Optimization",
+          "5–10 Pages",
+          "UI/UX Design",
+          "Basic SEO Structure",
+          "Contact Form",
+          "Mobile Responsive Design",
+          "Figma Source Files",
+        ],
+      },
+      {
+        tier: "E-commerce Website",
+        price: "₹45,000 – ₹90,000+",
+        features: [
+          "Product Pages",
+          "Shopping Cart",
+          "Payment Gateway UI",
+          "Admin Panel UI",
+          "Mobile Responsive",
+          "Complete Figma Design",
         ],
       },
     ],
@@ -354,23 +474,37 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "Logo Animation Sprint",
-        price: "$950",
+        tier: "Basic Video Editing",
+        price: "₹1,500 – ₹3,000 / video",
         features: [
-          "4K 3D Logo Reveal",
-          "3 Motion Variants",
-          "Transparent Alpha Exports",
-          "Sound FX",
+          "Reels & Shorts",
+          "Instagram Videos",
+          "Basic Cuts",
+          "Basic Transitions",
+          "Basic Color Correction",
         ],
       },
       {
-        tier: "60s Promo Video",
-        price: "$3,200",
+        tier: "Professional Motion",
+        price: "₹4,000 – ₹8,000 / video",
         features: [
-          "Storyboarding & Scripting",
-          "Full 2D/3D Animation",
-          "Pro Voiceover",
-          "4K Master Render",
+          "Motion Graphics",
+          "Text Animation",
+          "Color Correction",
+          "Sound Design",
+          "Professional Transitions",
+        ],
+      },
+      {
+        tier: "Premium Video Production",
+        price: "₹10,000 – ₹30,000+",
+        features: [
+          "Corporate Videos",
+          "Promotional Videos",
+          "Commercial Ads",
+          "Advanced Motion Graphics",
+          "Professional Color Grading",
+          "Sound Design",
         ],
       },
     ],
@@ -425,21 +559,36 @@ export const INITIAL_SERVICES = [
     ],
     pricing: [
       {
-        tier: "AI Concept Asset Pack",
-        price: "$1,500",
+        tier: "AI Image Generation",
+        price: "₹1,000 – ₹5,000",
         features: [
-          "10 High-Res Custom Visuals",
-          "Photorealistic Lighting",
-          "Full Commercial License",
+          "AI Image Generation",
+          "Creative Art Direction",
+          "High Resolution Output",
+          "Commercial Usage",
         ],
       },
       {
-        tier: "Full Campaign Suite",
-        price: "$3,800",
+        tier: "AI Product Mockup",
+        price: "₹2,000 – ₹6,000",
         features: [
-          "25 Custom Campaign Visuals",
-          "AI Video Loops",
-          "4K/8K Upscaled Master Files",
+          "AI Product Mockup",
+          "Product Integration",
+          "Realistic Lighting",
+          "High Resolution Export",
+          "2 Revisions",
+        ],
+      },
+      {
+        tier: "AI Creative Premium",
+        price: "₹2,500 – ₹10,000",
+        features: [
+          "AI Character Design",
+          "AI Background Creation",
+          "AI Photo Manipulation",
+          "Product Retouching",
+          "High Resolution Export",
+          "Commercial Usage",
         ],
       },
     ],
@@ -509,39 +658,38 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Essential Print",
-        price: "$650",
+        tier: "Single Print Design",
+        price: "₹1,500 – ₹4,000",
         features: [
-          "Single Print Design",
+          "Flyer / Poster Design",
+          "Print Ready Files",
+          "CMYK Setup",
           "2 Revisions",
+        ],
+      },
+      {
+        tier: "Brochure Design",
+        price: "₹3,000 – ₹7,000",
+        features: [
+          "Bi-fold / Tri-fold Brochure",
+          "Professional Layout",
           "Print Ready PDF",
-          "Source File Included",
-        ],
-      },
-      {
-        tier: "Business Package",
-        price: "$1,400",
-        features: [
-          "Up to 5 Print Designs",
-          "Premium Layout Design",
-          "Unlimited Revisions",
+          "CMYK Setup",
           "Source Files",
-          "Commercial License",
         ],
       },
       {
-        tier: "Enterprise Print Suite",
-        price: "$3,200",
+        tier: "Catalog Design",
+        price: "₹500 – ₹1,200 / page",
         features: [
-          "Complete Corporate Print System",
-          "Catalog + Brochure + Flyers",
-          "Brand Consistency Review",
-          "Dedicated Designer",
-          "Priority Delivery",
+          "Professional Page Layout",
+          "Product Presentation",
+          "Typography & Grid System",
+          "Print Ready Files",
+          "Source Files",
         ],
       },
     ],
-
     deliverables: [
       "Adobe Illustrator Source Files",
       "Adobe InDesign Files",
@@ -614,35 +762,37 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Campaign Starter",
-        price: "$850",
+        tier: "Digital Advertising",
+        price: "₹2,000 – ₹6,000",
         features: [
-          "5 Marketing Creatives",
-          "Social Media Ad Designs",
-          "2 Revisions",
-          "Source Files",
+          "Social Media Ad Creative",
+          "Facebook & Instagram Ads",
+          "Google Display Ad",
+          "2 Creative Variations",
+          "Print / Digital Export",
         ],
       },
       {
-        tier: "Business Campaign",
-        price: "$1,950",
+        tier: "Outdoor Advertising",
+        price: "₹3,000 – ₹10,000",
         features: [
-          "15 Marketing Assets",
-          "Print & Digital Designs",
-          "Billboard Layout",
-          "Unlimited Revisions",
-          "Commercial License",
+          "Hoarding / Billboard Design",
+          "Standee Design",
+          "Roll-up Banner",
+          "High Resolution Artwork",
+          "Print Ready Files",
         ],
       },
       {
-        tier: "Enterprise Marketing Suite",
-        price: "$4,200",
+        tier: "Complete Campaign",
+        price: "₹10,000 – ₹30,000+",
         features: [
-          "Complete Campaign Identity",
-          "Multi-Platform Ad Creatives",
+          "Campaign Visual Identity",
+          "Digital Ad Creatives",
           "Outdoor Advertising",
-          "Dedicated Creative Director",
-          "Priority Delivery",
+          "Promotional Posters",
+          "Social Media Creatives",
+          "Source Files",
         ],
       },
     ],
@@ -721,40 +871,37 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Starter Store",
-        price: "$1,250",
+        tier: "Product Listing Pack",
+        price: "₹4,000 – ₹10,000",
         features: [
-          "Landing Page Design",
-          "Product Page Design",
-          "Homepage UI",
-          "Mobile Responsive",
-          "2 Revisions",
+          "Amazon Listing Images",
+          "Product Feature Graphics",
+          "Product Retouching",
+          "High Resolution Export",
         ],
       },
       {
-        tier: "Growth Store",
-        price: "$2,850",
+        tier: "Product Infographics",
+        price: "₹800 – ₹2,000 / image",
         features: [
-          "Complete Store UI",
-          "Category Pages",
-          "Product Listings",
-          "Sales Banner Design",
-          "Unlimited Revisions",
+          "Product Infographic",
+          "Feature Highlighting",
+          "Icons & Typography",
+          "Professional Layout",
         ],
       },
       {
-        tier: "Enterprise Commerce",
-        price: "$5,900",
+        tier: "A+ Content & Mockups",
+        price: "₹8,000 – ₹20,000",
         features: [
-          "Premium Shopify Experience",
           "Amazon A+ Content",
-          "Conversion Optimization",
-          "Complete Design System",
-          "Priority Support",
+          "Product Mockups",
+          "Product Infographics",
+          "Brand Story Design",
+          "Mobile Optimized Layout",
         ],
       },
     ],
-
     deliverables: [
       "Figma Design Files",
       "Responsive UI Screens",
@@ -828,39 +975,38 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Business Essentials",
-        price: "$950",
+        tier: "Presentation Design",
+        price: "₹300 – ₹800 / slide",
         features: [
-          "Company Profile",
-          "Business Presentation",
+          "Professional PPT Design",
+          "Branding Integration",
+          "Charts & Infographics",
+          "Editable Source File",
+        ],
+      },
+      {
+        tier: "Proposal Design",
+        price: "₹5,000 – ₹15,000",
+        features: [
+          "Business Proposal Layout",
+          "Professional Typography",
+          "Charts & Graphics",
           "Editable Source Files",
-          "2 Revisions",
+          "Print Ready PDF",
         ],
       },
       {
-        tier: "Corporate Professional",
-        price: "$2,200",
+        tier: "Annual Report",
+        price: "₹20,000 – ₹60,000",
         features: [
-          "Company Profile",
-          "Investor Pitch Deck",
-          "Business Proposal",
-          "Corporate Stationery",
-          "Unlimited Revisions",
-        ],
-      },
-      {
-        tier: "Enterprise Corporate Suite",
-        price: "$4,800",
-        features: [
-          "Complete Corporate Identity Package",
-          "Annual Report Design",
-          "Presentation Templates",
-          "Investor Deck",
-          "Dedicated Creative Director",
+          "Professional Editorial Layout",
+          "Data Visualization",
+          "Charts & Infographics",
+          "Brand Consistency",
+          "Print & Digital Files",
         ],
       },
     ],
-
     deliverables: [
       "Editable PowerPoint Files",
       "Adobe InDesign Files",
@@ -934,35 +1080,39 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Starter Restaurant Kit",
-        price: "$850",
+        tier: "Restaurant Starter Kit",
+        price: "₹5,000 – ₹10,000",
         features: [
-          "Restaurant Logo",
           "Menu Card Design",
-          "Social Media Cover",
+          "Digital Menu",
+          "Social Media Creative",
+          "Table Tent Design",
           "2 Revisions",
         ],
       },
       {
         tier: "Restaurant Branding",
-        price: "$2,100",
+        price: "₹15,000 – ₹30,000",
         features: [
-          "Complete Brand Identity",
-          "Premium Menu Design",
+          "Restaurant Logo",
+          "Menu Design",
           "Food Packaging",
-          "Restaurant Signage",
-          "Unlimited Revisions",
+          "Signage Design",
+          "Social Media Kit",
+          "Source Files",
         ],
       },
       {
-        tier: "Premium Restaurant Suite",
-        price: "$4,900",
+        tier: "Complete Restaurant Package",
+        price: "₹35,000 – ₹60,000+",
         features: [
-          "Restaurant Website UI",
+          "Complete Restaurant Identity",
+          "Premium Menu System",
+          "Packaging Design",
+          "Signage",
+          "Digital Menu",
           "Food Delivery Creatives",
-          "Marketing Campaign Design",
-          "Complete Brand System",
-          "Dedicated Creative Director",
+          "Social Media Kit",
         ],
       },
     ],
@@ -1042,7 +1192,7 @@ export const INITIAL_SERVICES = [
     pricing: [
       {
         tier: "Event Essentials",
-        price: "$950",
+        price: "₹5,000 – ₹10,000",
         features: [
           "Invitation Design",
           "Event Poster",
@@ -1052,24 +1202,26 @@ export const INITIAL_SERVICES = [
       },
       {
         tier: "Professional Event Kit",
-        price: "$2,350",
+        price: "₹15,000 – ₹30,000",
         features: [
           "Complete Event Branding",
           "Stage Backdrop",
           "LED Screen Graphics",
-          "Roll-up Banners",
-          "Unlimited Revisions",
+          "Roll-up Banner",
+          "Invitation Design",
+          "Social Media Kit",
         ],
       },
       {
         tier: "Premium Event Experience",
-        price: "$5,200",
+        price: "₹40,000 – ₹80,000+",
         features: [
           "Complete Event Identity",
           "Exhibition Graphics",
+          "Stage & LED Graphics",
           "VIP Pass & Ticket Design",
           "Digital Promotion Kit",
-          "Dedicated Creative Director",
+          "Print Ready Files",
         ],
       },
     ],
@@ -1148,35 +1300,36 @@ export const INITIAL_SERVICES = [
 
     pricing: [
       {
-        tier: "Starter Merchandise",
-        price: "$750",
+        tier: "Single Merchandise Design",
+        price: "₹1,000 – ₹2,500",
         features: [
-          "3 Merchandise Designs",
-          "Professional Mockups",
-          "Print Ready Files",
+          "T-Shirt / Hoodie Design",
+          "Print Ready Artwork",
+          "High Resolution PNG",
           "2 Revisions",
         ],
       },
       {
-        tier: "Business Merchandise Kit",
-        price: "$1,850",
+        tier: "Merchandise Collection",
+        price: "₹5,000 – ₹12,000",
         features: [
-          "10 Merchandise Designs",
+          "Multiple Merchandise Designs",
           "Apparel + Accessories",
-          "Brand Mockups",
-          "Unlimited Revisions",
-          "Commercial License",
+          "Professional Mockups",
+          "Print Ready Files",
+          "Source Files",
         ],
       },
       {
-        tier: "Premium Brand Collection",
-        price: "$4,500",
+        tier: "Complete Brand Collection",
+        price: "₹15,000 – ₹30,000+",
         features: [
           "Complete Merchandise Collection",
-          "Corporate Gift Series",
+          "Apparel Designs",
+          "Corporate Gifts",
           "Print-on-Demand Assets",
           "Marketing Mockups",
-          "Dedicated Creative Director",
+          "Production Ready Artwork",
         ],
       },
     ],
@@ -1256,38 +1409,38 @@ export const INITIAL_SERVICES = [
     pricing: [
       {
         tier: "Starter Shoot",
-        price: "$950",
+        price: "₹5,000 – ₹10,000",
         features: [
           "2-Hour Shoot",
           "30 Edited Photos",
           "Basic Color Correction",
-          "Commercial Usage License",
+          "High Resolution Images",
         ],
       },
       {
         tier: "Professional Production",
-        price: "$2,800",
+        price: "₹15,000 – ₹30,000",
         features: [
           "Full-Day Shoot",
           "100+ Edited Photos",
-          "60-Second Promotional Video",
-          "Drone Footage",
+          "Promotional Video",
           "Professional Color Grading",
+          "Social Media Reels",
         ],
       },
       {
         tier: "Premium Brand Production",
-        price: "$6,500",
+        price: "₹40,000 – ₹80,000+",
         features: [
           "Multi-Day Production",
           "Corporate Brand Film",
           "Unlimited Edited Photos",
           "4K Cinematic Video",
+          "Drone Footage",
           "Dedicated Production Team",
         ],
       },
     ],
-
     deliverables: [
       "High Resolution JPG Images",
       "RAW Image Files",
@@ -1311,14 +1464,20 @@ export const INITIAL_PROJECTS = [
     client: "Aetheria Studio (Mumbai)",
     category: "Packaging Design",
     year: "2025",
+
     thumbnail:
       "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+
     heroImage:
       "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1400&q=80",
+
     gallery: [
       "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
     ],
+
     beforeAfter: {
       before:
         "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
@@ -1326,20 +1485,26 @@ export const INITIAL_PROJECTS = [
         "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
       label: "Packaging Redesign Before vs After",
     },
+
     summary:
       "A complete packaging and identity overhaul for a high-end Mumbaiian artisan glass brand, resulting in 240% online sales growth.",
+
     challenge:
       "Aetheria had exceptional craftsmanship but lacked a distinctive retail box and web presence that communicated its $300+ price tag.",
+
     solution:
       "We developed custom rigid boxes lined with tactile matte paper, foil-stamped brass typography, and photorealistic 3D interactive product displays.",
+
     impactMetrics: [
       { label: "Sales Growth", value: "+240%" },
       { label: "Awwwards Site of Day", value: "Winner" },
       { label: "Average Order Value", value: "$420" },
     ],
+
     liveUrl: "https://aetheria-demo.com",
     featured: true,
   },
+
   {
     id: "p2",
     title: "Lumina Smart Audio System",
@@ -1347,27 +1512,39 @@ export const INITIAL_PROJECTS = [
     client: "Lumina Tech (India)",
     category: "Website & UI",
     year: "2025",
+
     thumbnail:
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+
     heroImage:
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1400&q=80",
+
     gallery: [
       "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80",
     ],
+
     summary:
       "3D interactive web portal featuring real-time spatial audio preview and glass-morphic UI aesthetics.",
+
     challenge:
       "Lumina needed an online launch experience that felt as premium and immersive as their $1,500 wireless speaker system.",
+
     solution:
       "We engineered a Three.js web canvas with floating audio glass rings, allowing users to rotate and customize speaker materials live.",
+
     impactMetrics: [
       { label: "Conversion Rate", value: "4.8%" },
       { label: "Time on Page", value: "3m 45s" },
       { label: "Pre-Orders", value: "12,500+" },
     ],
+
     liveUrl: "https://lumina-audio-demo.com",
     featured: true,
   },
+
   {
     id: "p3",
     title: "Nouveau Haute Fashion",
@@ -1375,26 +1552,38 @@ export const INITIAL_PROJECTS = [
     client: "Maison Nouveau (Milan)",
     category: "Branding & Identity",
     year: "2024",
+
     thumbnail:
       "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80",
+
     heroImage:
       "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1400&q=80",
+
     gallery: [
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
     ],
+
     summary:
       "Comprehensive luxury identity design, bespoke monogram, editorial catalog layout, and runway invitations.",
+
     challenge:
       "Establish a new high-fashion label targeting global collectors across Europe and Asia.",
+
     solution:
       "Crafted custom serif logotypes, metallic foil stationery, and an interactive digital lookbook with smooth page transitions.",
+
     impactMetrics: [
       { label: "Global Press Features", value: "45+" },
       { label: "Brand Recognition", value: "98%" },
     ],
+
     liveUrl: "https://maison-nouveau.com",
     featured: true,
   },
+
   {
     id: "p4",
     title: "Verde Organics Campaign",
@@ -1402,23 +1591,37 @@ export const INITIAL_PROJECTS = [
     client: "Verde Foods (Stockholm)",
     category: "Social Media Design",
     year: "2025",
+
     thumbnail:
       "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+
     heroImage:
       "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
+
+    gallery: [
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
+    ],
+
     summary:
       "Scroll-stopping Instagram & TikTok visual campaign featuring 3D organic fruit splash animations and minimalist typography.",
+
     challenge:
       "Differentiate an organic cold-pressed beverage line in a crowded Scandinavian market.",
+
     solution:
       "Engineered vibrant, high-contrast carousel designs and short-form motion videos for performance advertising.",
+
     impactMetrics: [
       { label: "Impression Count", value: "8.4M" },
       { label: "ROAS", value: "5.2x" },
     ],
+
     featured: false,
   },
+
   {
     id: "p5",
     title: "Spy Graphix 3D Character Series",
@@ -1426,21 +1629,34 @@ export const INITIAL_PROJECTS = [
     client: "Metaverse Labs (Tokyo)",
     category: "AI Creative",
     year: "2025",
+
     thumbnail:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+
     heroImage:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
+
+    gallery: [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&w=800&q=80",
+    ],
+
     summary:
       "Generative AI character concept art and 8K upscaled render collection for next-gen gaming title.",
+
     challenge:
       "Produce 50 unique futuristic character designs in under 3 weeks for game studio greenlight pitch.",
+
     solution:
       "Utilized custom AI prompt pipelines with manual digital painting overpasses for museum-grade resolution.",
+
     impactMetrics: [
       { label: "Time Saved", value: "75%" },
       { label: "Pitch Funding Secured", value: "$4.2M" },
     ],
+
     featured: true,
   },
 ];

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { INITIAL_SERVICES } from "../data/initialData";
 import { ArrowUpRight, CheckCircle2, Sparkles, Send, Check, ChevronLeft } from "lucide-react";
+import ServiceGallery from "../components/ui/serviceGallery";
 export function ServiceDetailPage() {
   const { slug } = useParams();
   const [service, setService] = useState(null);
@@ -202,6 +203,9 @@ export function ServiceDetailPage() {
       </div>
     </div>
 
+    {/* Gallery */}
+
+    <ServiceGallery gallery={service.gallery} />
     {
       /* Pricing Tiers */
     }
