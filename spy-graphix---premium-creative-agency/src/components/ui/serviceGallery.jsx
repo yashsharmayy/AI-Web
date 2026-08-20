@@ -62,7 +62,7 @@ const ServiceGallery = ({ gallery = [] }) => {
                                 onClick={() => openGallery(index)}
                                 className="group relative overflow-hidden rounded-2xl bg-neutral-100 text-left"
                             >
-                                <div className="aspect-[4/3] overflow-hidden">
+                                <div className="aspect-4/3 overflow-hidden">
                                     <img
                                         src={image}
                                         alt={title}
@@ -72,7 +72,7 @@ const ServiceGallery = ({ gallery = [] }) => {
                                 </div>
 
                                 {/* Overlay */}
-                                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/10 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/10 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                     {category && (
                                         <span className="mb-2 text-xs uppercase tracking-[0.2em] text-white/70">
                                             {category}
@@ -92,7 +92,7 @@ const ServiceGallery = ({ gallery = [] }) => {
             {/* Lightbox */}
             {selectedIndex !== null && (
                 <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-5"
+                    className="fixed inset-0 z-9999 flex items-center justify-center bg-black/90 p-5"
                     onClick={closeGallery}
                 >
                     {/* Close */}

@@ -8,20 +8,161 @@ const SERVICES_LIST = [
   "Packaging Design",
   "Website & UI",
   "Motion Graphics",
-  "Photo Editing",
+  "Photography & Videography",
   "E-commerce Design",
   "Corporate Design",
   "Restaurant Design",
   "Event Design",
-  "Merchandise",
-  "AI Creative"
+  "Merchandise Design",
+  "AI Creative",
 ];
+const SERVICE_PRICING = {
+  "Branding & Identity": {
+    range: "₹10,000 – ₹60,000",
+    budgets: [
+      "₹10,000 – ₹20,000",
+      "₹20,000 – ₹40,000",
+      "₹40,000 – ₹60,000",
+      "₹60,000+",
+    ],
+  },
+
+  "Social Media Design": {
+    range: "₹10,000 – ₹35,000/month",
+    budgets: [
+      "₹10,000 – ₹15,000/month",
+      "₹15,000 – ₹20,000/month",
+      "₹20,000 – ₹35,000/month",
+      "₹35,000+ /month",
+    ],
+  },
+
+  "Print Design": {
+    range: "₹500 – ₹10,000",
+    budgets: [
+      "₹500 – ₹2,000",
+      "₹2,000 – ₹5,000",
+      "₹5,000 – ₹10,000",
+      "₹10,000+",
+    ],
+  },
+
+  "Marketing & Advertising": {
+    range: "₹2,000 – ₹20,000",
+    budgets: [
+      "₹2,000 – ₹5,000",
+      "₹5,000 – ₹10,000",
+      "₹10,000 – ₹20,000",
+      "₹20,000+",
+    ],
+  },
+
+  "Packaging Design": {
+    range: "₹2,000 – ₹12,000",
+    budgets: [
+      "₹2,000 – ₹5,000",
+      "₹5,000 – ₹8,000",
+      "₹8,000 – ₹12,000",
+      "₹12,000+",
+    ],
+  },
+
+  "Website & UI": {
+    range: "₹12,000 – ₹90,000+",
+    budgets: [
+      "₹12,000 – ₹25,000",
+      "₹25,000 – ₹45,000",
+      "₹45,000 – ₹90,000",
+      "₹90,000+",
+    ],
+  },
+
+  "Motion Graphics": {
+    range: "₹3,000 – ₹25,000+",
+    budgets: [
+      "₹3,000 – ₹7,000",
+      "₹7,000 – ₹15,000",
+      "₹15,000 – ₹25,000",
+      "₹25,000+",
+    ],
+  },
+
+  "Photo Editing": {
+    range: "₹500 – ₹10,000",
+    budgets: [
+      "₹500 – ₹2,000",
+      "₹2,000 – ₹5,000",
+      "₹5,000 – ₹10,000",
+      "₹10,000+",
+    ],
+  },
+
+  "E-commerce Design": {
+    range: "₹4,000 – ₹20,000",
+    budgets: [
+      "₹4,000 – ₹7,000",
+      "₹7,000 – ₹12,000",
+      "₹12,000 – ₹20,000",
+      "₹20,000+",
+    ],
+  },
+
+  "Corporate Design": {
+    range: "₹2,000 – ₹60,000",
+    budgets: [
+      "₹2,000 – ₹10,000",
+      "₹10,000 – ₹25,000",
+      "₹25,000 – ₹60,000",
+      "₹60,000+",
+    ],
+  },
+
+  "Restaurant Design": {
+    range: "₹1,500 – ₹25,000",
+    budgets: [
+      "₹1,500 – ₹5,000",
+      "₹5,000 – ₹10,000",
+      "₹10,000 – ₹25,000",
+      "₹25,000+",
+    ],
+  },
+
+  "Event Design": {
+    range: "₹1,500 – ₹80,000",
+    budgets: [
+      "₹1,500 – ₹5,000",
+      "₹5,000 – ₹15,000",
+      "₹15,000 – ₹40,000",
+      "₹40,000+",
+    ],
+  },
+
+  "Merchandise": {
+    range: "₹1,000 – ₹15,000",
+    budgets: [
+      "₹1,000 – ₹3,000",
+      "₹3,000 – ₹7,000",
+      "₹7,000 – ₹15,000",
+      "₹15,000+",
+    ],
+  },
+
+  "AI Creative": {
+    range: "₹500 – ₹10,000",
+    budgets: [
+      "₹500 – ₹2,000",
+      "₹2,000 – ₹5,000",
+      "₹5,000 – ₹10,000",
+      "₹10,000+",
+    ],
+  },
+};
 export function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [service, setService] = useState("Website & UI");
-  const [budget, setBudget] = useState("$5,000 - $10,000");
+  const [budget, setBudget] = useState("₹20,000 - ₹50,000");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -81,7 +222,7 @@ export function ContactPage() {
       setCompany("");
       setMessage("");
       setService("Website & UI");
-      setBudget("$5,000 - $10,000");
+      setBudget("₹20,000 - ₹50,000");
 
     } catch (error) {
       console.error("❌ CONTACT ERROR:", error);
@@ -181,11 +322,25 @@ export function ContactPage() {
             </label>
             <select
               value={service}
-              onChange={(e) => setService(e.target.value)}
-              className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none"
+              onChange={(e) => {
+                const selectedService = e.target.value;
+
+                setService(selectedService);
+
+                setBudget(
+                  SERVICE_PRICING[selectedService].budgets[0]
+                );
+              }}
             >
-              {SERVICES_LIST.map((s) => <option key={s} value={s}>{s}</option>)}
+              {SERVICES_LIST.map((serviceName) => (
+                <option key={serviceName} value={serviceName}>
+                  {serviceName}
+                </option>
+              ))}
             </select>
+            <p className="mt-2 text-[11px] text-[#999999]">
+              Typical pricing: {SERVICE_PRICING[service].range}
+            </p>
           </div>
 
           {
@@ -196,14 +351,19 @@ export function ContactPage() {
               Estimated Budget Range
             </label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-              {["$2,500 - $5,000", "$5,000 - $10,000", "$10,000 - $25,000", "$25,000+"].map((b) => <button
-                key={b}
-                type="button"
-                onClick={() => setBudget(b)}
-                className={`py-3 px-3 rounded-xl text-[11px] font-bold uppercase transition-all ${budget === b ? "bg-[#111111] text-white shadow-md" : "bg-[#F6F6F6] text-[#777777] hover:bg-[#EAEAEA] hover:text-[#111111]"}`}
-              >
-                {b}
-              </button>)}
+              {SERVICE_PRICING[service].budgets.map((budgetOption) => (
+                <button
+                  key={budgetOption}
+                  type="button"
+                  onClick={() => setBudget(budgetOption)}
+                  className={`py-3 px-3 rounded-xl text-[11px] font-bold uppercase transition-all ${budget === budgetOption
+                    ? "bg-[#111111] text-white shadow-md"
+                    : "bg-[#F6F6F6] text-[#777777] hover:bg-[#EAEAEA] hover:text-[#111111]"
+                    }`}
+                >
+                  {budgetOption}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -248,7 +408,7 @@ export function ContactPage() {
             Connect directly with our creative team on WhatsApp for immediate feedback on dieline specs or custom quote estimates.
           </p>
           <a
-            href="https://wa.me/8750634117"
+            href="https://wa.me/918750634117"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-xs uppercase px-6 py-3.5 rounded-2xl transition-all shadow-md"
@@ -265,7 +425,7 @@ export function ContactPage() {
             <h4 className="text-sm font-bold font-syne text-[#111111] flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#FF3B30]" /> Interactive Studio Locations
             </h4>
-            <span className="text-[10px] font-bold uppercase text-[#777777]">India • Mumbai</span>
+            <span className="text-[10px] font-bold uppercase text-[#777777]">India • Delhi</span>
           </div>
 
           <div className="relative aspect-16/10 rounded-2xl overflow-hidden bg-[#E8E8E8] border border-black/8 flex items-center justify-center">
@@ -279,7 +439,7 @@ export function ContactPage() {
                 <MapPin className="w-5 h-5" />
               </div>
               <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-bold">
-                Bahnhofstrasse 42, 8001 India, Switzerland
+                Delhi 110086 , India
               </div>
             </div>
           </div>
@@ -297,7 +457,7 @@ export function ContactPage() {
               <Phone className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-[#111111]">Studio Telephone</p>
-                <p>+41 44 210 8080 (India)</p>
+                <p>+91 87506 34117</p>
               </div>
             </div>
           </div>
@@ -308,5 +468,5 @@ export function ContactPage() {
 
     </div>
 
-  </div>;
+  </div>
 }
