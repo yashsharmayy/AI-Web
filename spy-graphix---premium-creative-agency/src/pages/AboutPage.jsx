@@ -21,14 +21,14 @@ export function AboutPage() {
         <span className="italic font-serif">Meets Infinite Imagination.</span>
       </h1>
       <p className="text-base text-[#666666] leading-relaxed">
-        Founded in India and Mumbai, SPY GRAPHIX is an independent creative agency specializing in luxury brand architectures, WebGL 3D canvas experiences, and physical packaging engineering.
+        Founded in India and Delhi, SPY GRAPHIX is an independent creative agency specializing in luxury brand architectures, WebGL 3D canvas experiences, and physical packaging engineering.
       </p>
     </div>
 
     {
       /* Hero Image / Studio Space */
     }
-    <div className="relative aspect-[21/9] rounded-[32px] overflow-hidden border border-black/8 shadow-2xl bg-[#F6F6F6]">
+    <div className="relative aspect-21/9 rounded-4xl overflow-hidden border border-black/8 shadow-2xl bg-[#F6F6F6]">
       <img
         src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
         alt="SPY GRAPHIX Studio Space India"
@@ -71,7 +71,7 @@ export function AboutPage() {
     {
       /* Interactive Timeline */
     }
-    <div className="bg-[#FFFFFF] rounded-[32px] p-8 md:p-12 border border-black/8 shadow-soft space-y-8">
+    <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-12 border border-black/8 shadow-soft space-y-8">
       <h2 className="text-3xl font-serif text-[#111111]">Agency Milestones</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[
@@ -98,7 +98,7 @@ export function AboutPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {team.map((member) => <div key={member.id} className="bg-[#FFFFFF] rounded-3xl p-6 border border-black/8 shadow-soft space-y-4">
-          <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#F6F6F6]">
+          <div className="aspect-3/4 rounded-2xl overflow-hidden bg-[#F6F6F6]">
             <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
           </div>
           <div className="space-y-1">
@@ -114,7 +114,7 @@ export function AboutPage() {
     {
       /* Awards & Press Table */
     }
-    <div className="bg-[#FFFFFF] rounded-[32px] p-8 md:p-12 border border-black/8 shadow-soft space-y-6">
+    <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-12 border border-black/8 shadow-soft space-y-6">
       <div className="flex items-center justify-between border-b border-black/6 pb-4">
         <h3 className="text-2xl font-serif text-[#111111]">Awards & Recognition</h3>
         <span className="text-xs font-bold uppercase text-[#FF3B30]">14+ International Honors</span>
