@@ -1,0 +1,7 @@
+{
+  "name": "Tax Mitra",
+  "description": "Indian tax, GST, accounting, business registration and compliance consultancy website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
