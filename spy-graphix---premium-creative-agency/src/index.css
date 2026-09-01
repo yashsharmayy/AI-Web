@@ -136,3 +136,43 @@
     display: none;
   }
 }
+
+/* =========================================
+   PORTFOLIO HERO MARQUEE
+========================================= */
+
+@keyframes portfolio-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes portfolio-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-portfolio-left {
+  animation: portfolio-left 35s linear infinite;
+}
+
+.animate-portfolio-right {
+  animation: portfolio-right 42s linear infinite;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-portfolio-left,
+  .animate-portfolio-right {
+    animation: none;
+  }
+}

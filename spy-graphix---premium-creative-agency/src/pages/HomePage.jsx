@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { AnimatedCounter } from "../components/ui/AnimatedCounter";
 import { AICreativeStudio } from "../components/ui/AICreativeStudio";
 import { InteractiveHero3D } from "../components/3d/InteractiveHero3D";
+import { PortfolioMarquee } from "../components/ui/portfoliomarqee";
 export function HomePage() {
   const [services, setServices] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -31,122 +32,787 @@ export function HomePage() {
     {
       /* --- HERO SECTION --- */
     }
-    <section className="relative min-h-[85vh] flex flex-col justify-between max-w-7xl mx-auto px-6 md:px-12 pt-6">
+    {/* =========================================================
+    HERO SECTION
+========================================================= */}
 
-      {
-        /* Decorative Red Glow Element */
-      }
+    <section className="relative min-h-screen bg-[#FFFFFF] text-[#000000] overflow-hidden">
 
-      {
-        /* Decorative Glass Spheres & Red Glow Elements */
-      }
-      <div className="absolute top-[8%] right-[10%] w-64 h-64 rounded-full bg-linear-to-br from-white/60 to-gray-400/20 backdrop-blur-xl border border-white/50 shadow-2xl z-0 pointer-events-none hidden lg:flex items-center justify-center">
-        <div className="w-48 h-48 rounded-full border-4 border-white/20 animate-[spin_20s_linear_infinite]" />
-      </div>
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-linear-to-tr from-[#FF3B30]/10 to-transparent blur-3xl z-0 opacity-40 pointer-events-none" />
-      <div className="absolute top-1/2 left-[52%] w-10 h-10 bg-[#111111] rounded-full shadow-[0_0_40px_rgba(0,0,0,0.1)] z-0 pointer-events-none hidden lg:block" />
+      {/* =====================================================
+        NAVIGATION
+    ====================================================== */}
 
-      {
-        /* Hero Top Badges */
-      }
-      <div className="relative z-10 flex items-center justify-between gap-4">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-xs font-semibold text-[#111111] uppercase tracking-wider shadow-soft">
-          <span className="w-2 h-2 rounded-full bg-[#FF3B30] animate-pulse" />
-          Awwwards Studio of the Year 2026
-        </div>
+      <header className="relative z-50 max-w-[1600px] mx-auto px-6 md:px-10 lg:px-14 py-6">
 
-        <div className="hidden sm:flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#777777]">
-          <span>India</span> • <span>Mumbai</span> • <span>Delhi</span>
-        </div>
-      </div>
+        <div className="flex items-center justify-between">
 
-      {
-        /* Hero Main Headline & Right Interactive 3D Column */
-      }
-      <div className="relative z-10 my-auto py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div className="lg:col-span-7 space-y-6">
-          <h1 className="text-6xl sm:text-8xl md:text-[100px] lg:text-[115px] xl:text-[128px] leading-[0.85] font-serif font-black tracking-tight text-[#111111] italic">
-            Beyond<br />
-            <span className="text-[#FF3B30] not-italic hover:opacity-90 transition-opacity cursor-pointer" data-cursor="CREATIVE">
-              Aesthetics
-            </span>
-          </h1>
+          {/* LOGO */}
+          <Link
+            to="/"
+            className="
+                    font-syne
+                    font-extrabold
+                    text-xl
+                    md:text-2xl
+                    tracking-[-0.06em]
+                "
+          >
+            SPY<span className="text-[#6D001A]">GRAPHICX</span>
+          </Link>
 
-          <p className="text-base sm:text-xl text-[#777777] max-w-lg font-light leading-relaxed">
-            An award-winning MERN-powered creative powerhouse crafting premium digital experiences through motion, 3D, and technical precision.
-          </p>
 
-          <div className="pt-2 flex flex-wrap items-center gap-4">
+          {/* DESKTOP NAV */}
+          <nav
+            className="
+                    hidden
+                    md:flex
+                    items-center
+                    gap-8
+                    text-[10px]
+                    font-bold
+                    uppercase
+                    tracking-[0.18em]
+                "
+          >
+
+            <Link
+              to="/portfolio"
+              className="hover:text-[#6D001A] transition-colors"
+            >
+              Work
+            </Link>
+
+            <Link
+              to="/services"
+              className="hover:text-[#6D001A] transition-colors"
+            >
+              Services
+            </Link>
+
+            <Link
+              to="/about"
+              className="hover:text-[#6D001A] transition-colors"
+            >
+              About
+            </Link>
+
             <Link
               to="/contact"
-              className="bg-[#111111] hover:bg-[#FF3B30] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-xl flex items-center gap-3 group"
-              data-cursor="START"
+              className="hover:text-[#6D001A] transition-colors"
             >
-              <span>Start A Project</span>
-              <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Contact
             </Link>
 
-            <Link
-              to="/portfolio"
-              className="glass-panel hover:bg-white text-[#111111] px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-soft"
-            >
-              Explore Selected Works
-            </Link>
-          </div>
+          </nav>
+
+
+          {/* MOBILE MENU */}
+          <button
+            className="
+                    md:hidden
+                    w-10
+                    h-10
+                    rounded-full
+                    border
+                    border-black/10
+                    flex
+                    items-center
+                    justify-center
+                "
+          >
+            <span className="text-sm">
+              ☰
+            </span>
+          </button>
+
         </div>
 
-        {
-          /* Hero Right Column: Interactive 3D Scene + Stats & Showreel Badge */
-        }
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          {
-            /* Interactive 3D Canvas Card */
-          }
-          <div className="glass-panel p-2 sm:p-3 rounded-3xl shadow-soft border border-white/70 relative bg-white/40 backdrop-blur-md overflow-hidden">
-            <InteractiveHero3D />
-          </div>
+      </header>
 
-          {
-            /* Stats & Spinning Showreel Badge Row */
-          }
-          <div className="flex items-center justify-between gap-4 px-2">
-            <div className="flex gap-4 sm:gap-6 items-center">
-              <div className="text-left">
-                <div className="text-2xl sm:text-3xl font-serif italic font-bold text-[#111111]">12+</div>
-                <div className="text-[10px] uppercase tracking-tighter text-[#777777] font-semibold">Awwwards Won</div>
-              </div>
-              <div className="w-px h-8 bg-black/10" />
-              <div className="text-left">
-                <div className="text-2xl sm:text-3xl font-serif italic font-bold text-[#111111]">240%</div>
-                <div className="text-[10px] uppercase tracking-tighter text-[#777777] font-semibold">Client Growth</div>
-              </div>
+
+      {/* =====================================================
+        HERO CONTENT
+    ====================================================== */}
+
+      <div
+        className="
+            relative
+            max-w-[1600px]
+            mx-auto
+
+            px-6
+            md:px-10
+            lg:px-14
+
+            pb-10
+        "
+      >
+
+        <div
+          className="
+                grid
+                grid-cols-1
+                lg:grid-cols-12
+
+                gap-10
+                lg:gap-14
+
+                items-center
+            "
+        >
+
+
+          {/* =================================================
+                LEFT — TYPOGRAPHY
+            ================================================== */}
+
+          <div
+            className="
+                    lg:col-span-7
+
+                    flex
+                    flex-col
+                    justify-center
+
+                    py-10
+                    lg:py-16
+                "
+          >
+
+            {/* Eyebrow */}
+
+            <div
+              className="
+                        flex
+                        items-center
+                        gap-3
+                        mb-8
+                    "
+            >
+
+              <span
+                className="
+                            w-10
+                            h-[2px]
+                            bg-[#6D001A]
+                        "
+              />
+
+              <span
+                className="
+                            text-[9px]
+                            md:text-[10px]
+
+                            font-bold
+                            uppercase
+
+                            tracking-[0.25em]
+
+                            text-[#777777]
+                        "
+              >
+                Independent Creative Studio
+              </span>
+
             </div>
 
-            <Link
-              to="/portfolio"
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-black/10 flex items-center justify-center relative cursor-pointer group bg-white/60 backdrop-blur-sm shadow-soft shrink-0"
-              data-cursor="SHOWREEL"
+
+            {/* MAIN HEADLINE */}
+
+            <h1
+              className="
+                        font-syne
+                        font-extrabold
+                        uppercase
+
+                        tracking-[-0.075em]
+                        leading-[0.78]
+
+                        text-[#000000]
+                    "
             >
-              <div className="absolute inset-0 border-t-2 border-[#FF3B30] rounded-full animate-[spin_10s_linear_infinite]" />
-              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#111111] group-hover:scale-110 transition-transform text-center px-2">
-                View Showreel
+
+              <span
+                className="
+                            block
+
+                            text-[16vw]
+                            sm:text-[100px]
+                            md:text-[120px]
+                            lg:text-[105px]
+                            xl:text-[140px]
+                        "
+              >
+                WE
               </span>
-            </Link>
+
+
+              <span
+                className="
+                            block
+
+                            text-[16vw]
+                            sm:text-[100px]
+                            md:text-[120px]
+                            lg:text-[105px]
+                            xl:text-[140px]
+                        "
+              >
+                MAKE
+              </span>
+
+
+              <span
+                className="
+                            block
+
+                            text-[16vw]
+                            sm:text-[100px]
+                            md:text-[120px]
+                            lg:text-[105px]
+                            xl:text-[140px]
+                        "
+              >
+                BRANDS
+              </span>
+
+
+              <span
+                className="
+                            block
+
+                            font-serif
+                            italic
+                            font-normal
+
+                            text-[#6D001A]
+
+                            text-[17vw]
+                            sm:text-[105px]
+                            md:text-[125px]
+                            lg:text-[110px]
+                            xl:text-[145px]
+
+                            tracking-[-0.05em]
+                        "
+              >
+                move.
+              </span>
+
+            </h1>
+
+
+            {/* DESCRIPTION */}
+
+            <p
+              className="
+                        mt-8
+
+                        max-w-xl
+
+                        text-sm
+                        sm:text-base
+                        md:text-lg
+
+                        text-[#777777]
+
+                        leading-[1.7]
+
+                        font-light
+                    "
+            >
+              We build bold identities, digital experiences and
+              visual systems for brands that refuse to blend in.
+            </p>
+
+
+            {/* CTA */}
+
+            <div
+              className="
+                        mt-8
+
+                        flex
+                        flex-wrap
+                        items-center
+
+                        gap-3
+                    "
+            >
+
+              <Link
+                to="/contact"
+                className="
+                            group
+
+                            bg-[#000000]
+                            hover:bg-[#6D001A]
+
+                            text-white
+
+                            px-7
+                            sm:px-8
+
+                            py-4
+
+                            rounded-full
+
+                            text-[10px]
+                            sm:text-xs
+
+                            font-bold
+                            uppercase
+
+                            tracking-[0.16em]
+
+                            transition-all
+                            duration-300
+
+                            flex
+                            items-center
+                            gap-3
+                        "
+              >
+
+                <span>
+                  Start A Project
+                </span>
+
+                <ArrowUpRight
+                  className="
+                                w-4
+                                h-4
+
+                                transition-transform
+                                duration-300
+
+                                group-hover:translate-x-1
+                                group-hover:-translate-y-1
+                            "
+                />
+
+              </Link>
+
+
+              <Link
+                to="/portfolio"
+                className="
+                            group
+
+                            px-6
+                            sm:px-7
+
+                            py-4
+
+                            rounded-full
+
+                            border
+                            border-black/10
+
+                            hover:border-[#6D001A]
+
+                            text-[#000000]
+
+                            hover:text-[#6D001A]
+
+                            text-[10px]
+                            sm:text-xs
+
+                            font-bold
+                            uppercase
+
+                            tracking-[0.16em]
+
+                            transition-all
+                            duration-300
+
+                            flex
+                            items-center
+                            gap-2
+                        "
+              >
+
+                <span>
+                  View Our Work
+                </span>
+
+                <span
+                  className="
+                                transition-transform
+                                group-hover:translate-x-1
+                            "
+                >
+                  →
+                </span>
+
+              </Link>
+
+            </div>
+
+
+            {/* SERVICE META */}
+
+            <div
+              className="
+                        mt-10
+
+                        flex
+                        flex-wrap
+                        items-center
+
+                        gap-x-6
+                        gap-y-3
+
+                        text-[8px]
+                        sm:text-[9px]
+
+                        font-bold
+                        uppercase
+
+                        tracking-[0.18em]
+
+                        text-[#999999]
+                    "
+            >
+
+              <span>
+                Branding
+              </span>
+
+              <span className="w-1 h-1 rounded-full bg-[#6D001A]" />
+
+              <span>
+                Digital
+              </span>
+
+              <span className="w-1 h-1 rounded-full bg-[#6D001A]" />
+
+              <span>
+                Motion
+              </span>
+
+              <span className="w-1 h-1 rounded-full bg-[#6D001A]" />
+
+              <span>
+                AI Creative
+              </span>
+
+            </div>
+
           </div>
+
+
+          {/* =================================================
+                RIGHT — ART DIRECTION PANEL
+            ================================================== */}
+
+          <div
+            className="
+                    lg:col-span-5
+
+                    relative
+
+                    h-[500px]
+                    sm:h-[560px]
+                    lg:h-[620px]
+                "
+          >
+
+            {/* Burgundy background */}
+
+            <div
+              className="
+                        absolute
+                        inset-0
+
+                        bg-[#6D001A]
+
+                        overflow-hidden
+                    "
+            >
+
+              {/* Decorative circle */}
+
+              <div
+                className="
+                            absolute
+
+                            -right-24
+                            -top-24
+
+                            w-64
+                            h-64
+
+                            rounded-full
+
+                            border
+                            border-white/10
+                        "
+              />
+
+
+              {/* Vertical label */}
+
+              <div
+                className="
+                            absolute
+
+                            left-4
+                            top-8
+
+                            z-40
+
+                            text-white/50
+
+                            text-[8px]
+
+                            uppercase
+
+                            tracking-[0.3em]
+
+                            [writing-mode:vertical-rl]
+                        "
+              >
+                Selected Works / 2026
+              </div>
+
+
+              {/* Project number */}
+
+              <div
+                className="
+                            absolute
+
+                            right-5
+                            top-6
+
+                            z-40
+
+                            text-white
+
+                            text-[9px]
+
+                            font-bold
+
+                            tracking-[0.2em]
+                        "
+              >
+                01 / 06
+              </div>
+
+
+              {/* =================================================
+                        PORTFOLIO MARQUEE
+                    ================================================== */}
+
+              <div className="relative h-[500px] sm:h-[560px] lg:h-[620px]">
+                <div className="absolute inset-0 bg-[#6D001A] overflow-hidden">
+
+                  <div className="absolute left-5 right-5 top-16 bottom-20">
+                    <PortfolioMarquee projects={projects} />
+                  </div>
+
+                </div>
+              </div>
+
+              {/* =================================================
+                        BOTTOM INFORMATION
+                    ================================================== */}
+
+              <div
+                className="
+                            absolute
+
+                            left-5
+                            right-5
+
+                            bottom-5
+
+                            z-40
+
+                            flex
+                            items-end
+                            justify-between
+                        "
+              >
+
+                <div>
+
+                  <div
+                    className="
+                                    text-white/60
+
+                                    text-[8px]
+
+                                    uppercase
+
+                                    tracking-[0.2em]
+
+                                    mb-1
+                                "
+                  >
+                    Creative Direction
+                  </div>
+
+                  <div
+                    className="
+                                    text-white
+
+                                    font-syne
+
+                                    text-lg
+
+                                    font-bold
+                                "
+                  >
+                    Selected Works
+                  </div>
+
+                </div>
+
+
+                {/* Portfolio button */}
+
+                <Link
+                  to="/portfolio"
+                  className="
+                                group
+
+                                w-11
+                                h-11
+
+                                rounded-full
+
+                                border
+                                border-white/40
+
+                                flex
+                                items-center
+                                justify-center
+
+                                text-white
+
+                                hover:bg-white
+                                hover:text-[#6D001A]
+
+                                transition-all
+                                duration-300
+                            "
+                >
+
+                  <ArrowUpRight
+                    className="
+                                    w-4
+                                    h-4
+
+                                    transition-transform
+                                    duration-300
+
+                                    group-hover:translate-x-0.5
+                                    group-hover:-translate-y-0.5
+                                "
+                  />
+
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
+
+        {/* =====================================================
+            BOTTOM SERVICE STRIP
+        ====================================================== */}
+
+        <div
+          className="
+                mt-10
+
+                border-t
+                border-black/10
+            "
+        >
+
+          <div
+            className="
+                    grid
+                    grid-cols-2
+                    md:grid-cols-4
+                "
+          >
+
+            {[
+              "Branding",
+              "Digital",
+              "Motion",
+              "AI Creative",
+            ].map((item, index) => (
+
+              <div
+                key={item}
+                className={`
+                            py-5
+                            md:py-6
+
+                            ${index !== 0
+                    ? "border-l border-black/10 pl-5 md:pl-8"
+                    : ""
+                  }
+                        `}
+              >
+
+                <div
+                  className="
+                                flex
+                                items-center
+                                gap-3
+                            "
+                >
+
+                  <span
+                    className="
+                                    text-[9px]
+
+                                    text-[#6D001A]
+
+                                    font-bold
+                                "
+                  >
+                    0{index + 1}
+                  </span>
+
+                  <span
+                    className="
+                                    text-[8px]
+                                    md:text-[10px]
+
+                                    font-bold
+
+                                    uppercase
+
+                                    tracking-[0.2em]
+                                "
+                  >
+                    {item}
+                  </span>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
       </div>
 
-      {
-        /* Hero Bottom Bar Metrics */
-      }
-      <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-black/8">
-        <AnimatedCounter value="+240%" label="Average Client Revenue Increase" />
-        <AnimatedCounter value="14+" label="Global Awwwards & FWA Honors" />
-        <AnimatedCounter value="100%" label="On-Time Delivery Rate" />
-        <AnimatedCounter value="14" label="Specialized Design Categories" />
-      </div>
     </section>
-
     {
       /* --- TRUSTED LOGOS SLIDER --- */
     }
