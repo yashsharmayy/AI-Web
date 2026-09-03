@@ -13,7 +13,7 @@ export function AboutPage() {
       /* Header */
     }
     <div className="space-y-6 max-w-3xl">
-      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF3B30]/10 text-[#FF3B30] text-xs font-semibold uppercase tracking-wider">
+      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#6d001a]/10 text-[#6d001a] text-xs font-semibold uppercase tracking-wider">
         <Sparkles className="w-3.5 h-3.5" /> Agency Story & Philosophy
       </div>
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#111111] font-light leading-tight">
@@ -35,7 +35,7 @@ export function AboutPage() {
         className="w-full h-full object-cover"
       />
       <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full text-xs font-bold text-[#111111] uppercase tracking-wider flex items-center gap-2">
-        <MapPin className="w-3.5 h-3.5 text-[#FF3B30]" /> India HQ & Atelier
+        <MapPin className="w-3.5 h-3.5 text-[#6d001a]" /> India HQ & Atelier
       </div>
     </div>
 
@@ -44,7 +44,7 @@ export function AboutPage() {
     }
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div className="bg-[#FFFFFF] p-8 rounded-3xl border border-black/8 shadow-soft space-y-3">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">Our Mission</span>
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">Our Mission</span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">Prestige Through Simplicity</h3>
         <p className="text-xs text-[#666666] leading-relaxed">
           Eliminate non-essential noise. Focus on pristine whitespace, responsive typography, and tactile WebGL physics to make brands unforgettable.
@@ -52,7 +52,7 @@ export function AboutPage() {
       </div>
 
       <div className="bg-[#FFFFFF] p-8 rounded-3xl border border-black/8 shadow-soft space-y-3">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">Our Vision</span>
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">Our Vision</span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">The Spatial Web</h3>
         <p className="text-xs text-[#666666] leading-relaxed">
           Merge physical packaging, 3D browser canvases, and generative AI into fluid, sub-second web experiences.
@@ -60,7 +60,7 @@ export function AboutPage() {
       </div>
 
       <div className="bg-[#FFFFFF] p-8 rounded-3xl border border-black/8 shadow-soft space-y-3">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">Our Promise</span>
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">Our Promise</span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">Zero Compromise</h3>
         <p className="text-xs text-[#666666] leading-relaxed">
           Every vector dieline, WebGL shader, and typography layout is vetted to pass international Awwwards standards before launch.
@@ -79,7 +79,7 @@ export function AboutPage() {
           { year: "2022", title: "Mumbai Atelier", desc: "Expanded into physical packaging engineering & dieline design." },
           { year: "2024", title: "3D Web Canvas", desc: "Introduced React Three Fiber glass physical shaders." },
           { year: "2026", title: "Awwwards Studio", desc: "Awarded Studio of the Year & integrated Gemini AI Creative Engine." }
-        ].map((m, i) => <div key={i} className="border-l-2 border-[#FF3B30] pl-4 space-y-1">
+        ].map((m, i) => <div key={i} className="border-l-2 border-[#6d001a] pl-4 space-y-1">
           <span className="text-2xl font-extrabold font-syne text-[#111111]">{m.year}</span>
           <h4 className="text-sm font-bold text-[#111111]">{m.title}</h4>
           <p className="text-xs text-[#666666] leading-relaxed">{m.desc}</p>
@@ -92,7 +92,7 @@ export function AboutPage() {
     }
     <div className="space-y-8">
       <div className="space-y-2">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">Creative Leadership</span>
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">Creative Leadership</span>
         <h2 className="text-3xl font-serif text-[#111111]">Meet Our Studio Team</h2>
       </div>
 
@@ -102,7 +102,7 @@ export function AboutPage() {
             <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
           </div>
           <div className="space-y-1">
-            <span className="text-[10px] text-[#FF3B30] font-bold uppercase tracking-wider">{member.experience}</span>
+            <span className="text-[10px] text-[#6d001a] font-bold uppercase tracking-wider">{member.experience}</span>
             <h3 className="text-lg font-bold font-syne text-[#111111]">{member.name}</h3>
             <p className="text-xs text-[#777777] font-medium">{member.role}</p>
           </div>
@@ -117,13 +117,13 @@ export function AboutPage() {
     <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-12 border border-black/8 shadow-soft space-y-6">
       <div className="flex items-center justify-between border-b border-black/6 pb-4">
         <h3 className="text-2xl font-serif text-[#111111]">Awards & Recognition</h3>
-        <span className="text-xs font-bold uppercase text-[#FF3B30]">14+ International Honors</span>
+        <span className="text-xs font-bold uppercase text-[#6d001a]">14+ International Honors</span>
       </div>
 
       <div className="space-y-3">
         {INITIAL_AWARDS.map((aw) => <div key={aw.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-[#F6F6F6] rounded-2xl gap-2 text-xs">
           <div className="flex items-center gap-3">
-            <span className="font-bold text-[#FF3B30]">{aw.year}</span>
+            <span className="font-bold text-[#6d001a]">{aw.year}</span>
             <span className="font-bold text-[#111111]">{aw.title}</span>
           </div>
           <div className="text-[#777777]">

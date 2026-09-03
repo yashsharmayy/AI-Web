@@ -20,7 +20,7 @@ export function ProjectDetailPage() {
   if (!project) {
     return <div className="min-h-screen flex flex-col items-center justify-center pt-24 space-y-4 text-center">
       <h2 className="text-3xl font-serif">Project Case Study Not Found</h2>
-      <Link to="/portfolio" className="text-xs font-bold uppercase tracking-wider text-[#FF3B30]">
+      <Link to="/portfolio" className="text-xs font-bold uppercase tracking-wider text-[#6d001a]">
         ← Back to Portfolio
       </Link>
     </div>;
@@ -37,7 +37,7 @@ export function ProjectDetailPage() {
       >
         <ChevronLeft className="w-4 h-4" /> Selected Portfolio
       </Link>
-      <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] bg-[#FF3B30]/10 px-4 py-1.5 rounded-full">
+      <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] bg-[#6d001a]/10 px-4 py-1.5 rounded-full">
         {project.category}
       </span>
     </div>
@@ -60,7 +60,7 @@ export function ProjectDetailPage() {
         href={project.liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#FF3B30] text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+        className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#6d001a] text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md"
       >
         <span>Visit Live Experience</span>
         <ExternalLink className="w-4 h-4" />
@@ -86,7 +86,7 @@ export function ProjectDetailPage() {
         <span className="text-xs font-bold text-[#777777] uppercase tracking-wider block">
           {metric.label}
         </span>
-        <span className="text-3xl md:text-4xl font-extrabold font-syne text-[#FF3B30]">
+        <span className="text-3xl md:text-4xl font-extrabold font-syne text-[#6d001a]">
           {metric.value}
         </span>
       </div>)}
@@ -97,7 +97,7 @@ export function ProjectDetailPage() {
     }
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="bg-[#FFFFFF] rounded-[32px] p-8 md:p-10 border border-black/8 shadow-soft space-y-4">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
           01. The Challenge
         </span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">
@@ -109,7 +109,7 @@ export function ProjectDetailPage() {
       </div>
 
       <div className="bg-[#FFFFFF] rounded-[32px] p-8 md:p-10 border border-black/8 shadow-soft space-y-4">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
           02. The Solution
         </span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">
@@ -158,7 +158,7 @@ export function ProjectDetailPage() {
       </p>
       <Link
         to="/contact"
-        className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#E02E24] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
+        className="inline-flex items-center gap-2 bg-[#6d001a] hover:bg-[#E02E24] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
       >
         <span>Initiate Project Discovery</span>
         <ArrowUpRight className="w-4 h-4" />

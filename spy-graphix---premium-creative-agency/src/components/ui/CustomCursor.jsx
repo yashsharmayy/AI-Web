@@ -40,40 +40,40 @@ export function CustomCursor() {
     return null;
   }
   return <>
-      {
-    /* Primary Dot */
-  }
-      <motion.div
-    className="fixed top-0 left-0 w-3 h-3 bg-[#FF3B30] rounded-full pointer-events-none z-[9999] mix-blend-difference"
-    animate={{
-      x: mousePosition.x - 6,
-      y: mousePosition.y - 6,
-      scale: isClicking ? 0.6 : isHovered ? 1.5 : 1
-    }}
-    transition={{ type: "spring", damping: 30, stiffness: 400, mass: 0.1 }}
-  />
+    {
+      /* Primary Dot */
+    }
+    <motion.div
+      className="fixed top-0 left-0 w-3 h-3 bg-[#6d001a] rounded-full pointer-events-none z-[9999] mix-blend-difference"
+      animate={{
+        x: mousePosition.x - 6,
+        y: mousePosition.y - 6,
+        scale: isClicking ? 0.6 : isHovered ? 1.5 : 1
+      }}
+      transition={{ type: "spring", damping: 30, stiffness: 400, mass: 0.1 }}
+    />
 
-      {
-    /* Trailing Ring & Text Indicator */
-  }
-      <motion.div
-    className="fixed top-0 left-0 rounded-full border border-black/20 pointer-events-none z-[9998] flex items-center justify-center bg-white/30 backdrop-blur-[2px] text-[10px] font-bold uppercase tracking-wider text-black"
-    animate={{
-      x: mousePosition.x - (cursorText ? 36 : isHovered ? 24 : 16),
-      y: mousePosition.y - (cursorText ? 36 : isHovered ? 24 : 16),
-      width: cursorText ? 72 : isHovered ? 48 : 32,
-      height: cursorText ? 72 : isHovered ? 48 : 32,
-      borderColor: isHovered ? "rgba(255, 59, 48, 0.4)" : "rgba(0, 0, 0, 0.12)"
-    }}
-    transition={{ type: "spring", damping: 25, stiffness: 200, mass: 0.2 }}
-  >
-        {cursorText && <motion.span
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    className="text-[9px] font-semibold tracking-widest text-[#111111]"
-  >
-            {cursorText}
-          </motion.span>}
-      </motion.div>
-    </>;
+    {
+      /* Trailing Ring & Text Indicator */
+    }
+    <motion.div
+      className="fixed top-0 left-0 rounded-full border border-black/20 pointer-events-none z-[9998] flex items-center justify-center bg-white/30 backdrop-blur-[2px] text-[10px] font-bold uppercase tracking-wider text-black"
+      animate={{
+        x: mousePosition.x - (cursorText ? 36 : isHovered ? 24 : 16),
+        y: mousePosition.y - (cursorText ? 36 : isHovered ? 24 : 16),
+        width: cursorText ? 72 : isHovered ? 48 : 32,
+        height: cursorText ? 72 : isHovered ? 48 : 32,
+        borderColor: isHovered ? "rgba(255, 59, 48, 0.4)" : "rgba(0, 0, 0, 0.12)"
+      }}
+      transition={{ type: "spring", damping: 25, stiffness: 200, mass: 0.2 }}
+    >
+      {cursorText && <motion.span
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-[9px] font-semibold tracking-widest text-[#111111]"
+      >
+        {cursorText}
+      </motion.span>}
+    </motion.div>
+  </>;
 }

@@ -386,7 +386,7 @@ export function AdminPage() {
     return <div className="min-h-screen pt-28 pb-20 flex items-center justify-center px-6">
       <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-12 border border-black/8 shadow-2xl max-w-md w-full space-y-6">
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-full bg-[#111111] text-[#FF3B30] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-full bg-[#111111] text-[#6d001a] flex items-center justify-center mx-auto">
             <Shield className="w-6 h-6" />
           </div>
           <h1 className="text-2xl font-bold font-syne text-[#111111]">
@@ -426,7 +426,7 @@ export function AdminPage() {
 
           <button
             type="submit"
-            className="w-full bg-[#111111] hover:bg-[#FF3B30] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+            className="w-full bg-[#111111] hover:bg-[#6d001a] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
           >
             <Lock className="w-4 h-4" /> Authenticate Session
           </button>
@@ -442,7 +442,7 @@ export function AdminPage() {
       /* Toast Notification */
     }
     {toastMessage && <div className="fixed bottom-6 right-6 z-[100000] bg-[#111111] text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-bold flex items-center gap-2 border border-white/10 animate-bounce">
-      <CheckCircle2 className="w-4 h-4 text-[#FF3B30]" />
+      <CheckCircle2 className="w-4 h-4 text-[#6d001a]" />
       <span>{toastMessage}</span>
     </div>}
 
@@ -451,7 +451,7 @@ export function AdminPage() {
     }
     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-black/8 pb-6">
       <div>
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] flex items-center gap-1.5">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] flex items-center gap-1.5">
           <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} /> MongoDB Atlas Live Database
         </span>
         <h1 className="text-3xl font-bold font-syne text-[#111111]">
@@ -541,7 +541,7 @@ export function AdminPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-3xl border border-black/8 shadow-soft space-y-1">
           <span className="text-xs text-[#777777] font-semibold uppercase">Total Client Leads</span>
-          <p className="text-3xl font-extrabold font-syne text-[#FF3B30]">{analytics.totalLeads}</p>
+          <p className="text-3xl font-extrabold font-syne text-[#6d001a]">{analytics.totalLeads}</p>
         </div>
         <div className="bg-white p-6 rounded-3xl border border-black/8 shadow-soft space-y-1">
           <span className="text-xs text-[#777777] font-semibold uppercase">Published Projects</span>
@@ -563,7 +563,7 @@ export function AdminPage() {
           {[45, 62, 58, 84, 91, 110, 135].map((val, idx) => <div key={idx} className="flex-1 flex flex-col items-center gap-2">
             <div
               style={{ height: `${val / 150 * 100}%` }}
-              className="w-full bg-[#111111] hover:bg-[#FF3B30] transition-all rounded-t-xl"
+              className="w-full bg-[#111111] hover:bg-[#6d001a] transition-all rounded-t-xl"
             />
             <span className="text-[10px] text-[#777777] font-bold">Month {idx + 1}</span>
           </div>)}
@@ -585,7 +585,7 @@ export function AdminPage() {
             setSvcPrice("$3,500");
             setShowServiceModal(true);
           }}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
         >
           <Plus className="w-4 h-4" /> Add Service
         </button>
@@ -605,7 +605,7 @@ export function AdminPage() {
             {services.filter((s) => s.title.toLowerCase().includes(searchTerm.toLowerCase())).map((s) => <tr key={s.id} className="hover:bg-[#FAFAFA]">
               <td className="p-4 font-bold">{s.title}</td>
               <td className="p-4 text-[#777777]">{s.category}</td>
-              <td className="p-4 font-bold text-[#FF3B30]">{s.pricing?.[0]?.price || "$3,500"}</td>
+              <td className="p-4 font-bold text-[#6d001a]">{s.pricing?.[0]?.price || "$3,500"}</td>
               <td className="p-4 text-right space-x-2">
                 <button
                   onClick={() => {
@@ -644,7 +644,7 @@ export function AdminPage() {
             setProjSummary("");
             setShowProjectModal(true);
           }}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
         >
           <Plus className="w-4 h-4" /> Add Case Study
         </button>
@@ -703,7 +703,7 @@ export function AdminPage() {
             setBlogContent("");
             setShowBlogModal(true);
           }}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
         >
           <Plus className="w-4 h-4" /> Write Article
         </button>
@@ -756,7 +756,7 @@ export function AdminPage() {
         <h3 className="text-xl font-bold font-syne">Category Taxonomy</h3>
         <button
           onClick={() => setShowCategoryModal(true)}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
         >
           <Plus className="w-4 h-4" /> Add Category
         </button>
@@ -777,7 +777,7 @@ export function AdminPage() {
               <td className="p-4 font-bold">{c.name}</td>
               <td className="p-4 font-mono text-[#777777]">{c.slug}</td>
               <td className="p-4">
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-[#FF3B30]/10 text-[#FF3B30]">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-[#6d001a]/10 text-[#6d001a]">
                   {c.type}
                 </span>
               </td>
@@ -801,13 +801,13 @@ export function AdminPage() {
         {pricings.map((p) => <div key={p.id} className="bg-white rounded-3xl p-6 border border-black/8 shadow-soft space-y-4">
           <div className="flex justify-between items-center">
             <h4 className="font-bold text-lg">{p.name}</h4>
-            {p.popular && <span className="bg-[#FF3B30] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Popular</span>}
+            {p.popular && <span className="bg-[#6d001a] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Popular</span>}
           </div>
           <p className="text-2xl font-extrabold font-syne text-[#111111]">{p.price}</p>
           <p className="text-xs text-[#777777]">{p.description}</p>
           <ul className="space-y-2 text-xs text-[#333333]">
             {p.features?.map((f, i) => <li key={i} className="flex items-center gap-2">
-              <Check className="w-3.5 h-3.5 text-[#FF3B30]" /> {f}
+              <Check className="w-3.5 h-3.5 text-[#6d001a]" /> {f}
             </li>)}
           </ul>
         </div>)}
@@ -845,7 +845,7 @@ export function AdminPage() {
             </div>
           </div>
           <p className="text-xs text-[#333333] italic">"{t.quote}"</p>
-          <div className="flex text-[#FF3B30]">
+          <div className="flex text-[#6d001a]">
             {[...Array(t.rating || 5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
           </div>
         </div>)}
@@ -862,7 +862,7 @@ export function AdminPage() {
           <img src={m.avatar} alt={m.name} className="w-20 h-20 rounded-full object-cover mx-auto" />
           <div>
             <h4 className="font-bold text-sm text-[#111111]">{m.name}</h4>
-            <p className="text-xs text-[#FF3B30] font-semibold">{m.role}</p>
+            <p className="text-xs text-[#6d001a] font-semibold">{m.role}</p>
           </div>
           <p className="text-[11px] text-[#777777] line-clamp-2">{m.bio}</p>
         </div>)}
@@ -879,7 +879,7 @@ export function AdminPage() {
           <div className="flex items-center justify-between text-xs">
             <span className="font-bold text-[#111111] text-sm">{lead.name} ({lead.email})</span>
             <div className="flex items-center gap-2">
-              <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase ${lead.status === "Replied" ? "bg-green-100 text-green-700" : "bg-[#FF3B30]/10 text-[#FF3B30]"}`}>
+              <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase ${lead.status === "Replied" ? "bg-green-100 text-green-700" : "bg-[#6d001a]/10 text-[#6d001a]"}`}>
                 {lead.status}
               </span>
               <button
@@ -917,7 +917,7 @@ export function AdminPage() {
         <h3 className="text-xl font-bold font-syne">Journal Subscribers</h3>
         <button
           onClick={handleExportCSV}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-md"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-md"
         >
           <Download className="w-4 h-4" /> Export CSV File
         </button>
@@ -944,13 +944,13 @@ export function AdminPage() {
     {activeTab === "media" && <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-bold font-syne">Cloudinary Asset Manager</h3>
-        <label className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer flex items-center gap-2 shadow-md">
+        <label className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer flex items-center gap-2 shadow-md">
           <Upload className="w-4 h-4" /> Upload Media
           <input type="file" accept="image/*" onChange={(e) => handleFileUpload(e)} className="hidden" />
         </label>
       </div>
 
-      {uploadingImage && <p className="text-xs text-[#FF3B30] animate-pulse">Uploading asset to Cloudinary...</p>}
+      {uploadingImage && <p className="text-xs text-[#6d001a] animate-pulse">Uploading asset to Cloudinary...</p>}
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {mediaList.map((m) => <div key={m.id} className="bg-white rounded-2xl border border-black/8 overflow-hidden shadow-soft group relative">
@@ -965,14 +965,14 @@ export function AdminPage() {
                 navigator.clipboard.writeText(m.url);
                 showToast("Image URL copied!");
               }}
-              className="p-2 bg-white rounded-full text-black hover:bg-[#FF3B30] hover:text-white"
+              className="p-2 bg-white rounded-full text-black hover:bg-[#6d001a] hover:text-white"
               title="Copy URL"
             >
               <Copy className="w-4 h-4" />
             </button>
             <button
               onClick={() => setPreviewMediaUrl(m.url)}
-              className="p-2 bg-white rounded-full text-black hover:bg-[#FF3B30] hover:text-white"
+              className="p-2 bg-white rounded-full text-black hover:bg-[#6d001a] hover:text-white"
               title="Preview"
             >
               <Eye className="w-4 h-4" />
@@ -997,7 +997,7 @@ export function AdminPage() {
         <h3 className="text-xl font-bold font-syne">Role-Based Accounts</h3>
         <button
           onClick={() => setShowUserModal(true)}
-          className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+          className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
         >
           <Plus className="w-4 h-4" /> Add User
         </button>
@@ -1018,7 +1018,7 @@ export function AdminPage() {
               <td className="p-4 font-bold">{u.name}</td>
               <td className="p-4 text-[#777777]">{u.email}</td>
               <td className="p-4">
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-[#FF3B30]/10 text-[#FF3B30]">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-[#6d001a]/10 text-[#6d001a]">
                   {u.role}
                 </span>
               </td>
@@ -1084,7 +1084,7 @@ export function AdminPage() {
             className="w-full bg-[#F6F6F6] p-3 text-xs rounded-xl focus:outline-none resize-none"
           />
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Save Service
             </button>
             <button type="button" onClick={() => setShowServiceModal(false)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">
@@ -1125,7 +1125,7 @@ export function AdminPage() {
             className="w-full bg-[#F6F6F6] p-3 text-xs rounded-xl focus:outline-none resize-none"
           />
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Save Case Study
             </button>
             <button type="button" onClick={() => setShowProjectModal(false)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">
@@ -1159,7 +1159,7 @@ export function AdminPage() {
             className="w-full bg-[#F6F6F6] p-3 text-xs rounded-xl focus:outline-none"
           />
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Publish Article
             </button>
             <button type="button" onClick={() => setShowBlogModal(false)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">
@@ -1195,7 +1195,7 @@ export function AdminPage() {
             <option value="Blog">Blog Category</option>
           </select>
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Save Category
             </button>
             <button type="button" onClick={() => setShowCategoryModal(false)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">
@@ -1239,7 +1239,7 @@ export function AdminPage() {
             <option value="Client">Client</option>
           </select>
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Save User
             </button>
             <button type="button" onClick={() => setShowUserModal(false)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">
@@ -1266,7 +1266,7 @@ export function AdminPage() {
             className="w-full bg-[#F6F6F6] p-3 text-xs rounded-xl focus:outline-none resize-none"
           />
           <div className="flex gap-2">
-            <button type="submit" className="flex-1 bg-[#111111] hover:bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase">
+            <button type="submit" className="flex-1 bg-[#111111] hover:bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase">
               Send Email Reply
             </button>
             <button type="button" onClick={() => setShowReplyModal(null)} className="px-4 bg-[#F6F6F6] text-xs font-bold rounded-xl">

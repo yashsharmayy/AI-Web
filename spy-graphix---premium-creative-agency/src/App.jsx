@@ -47,7 +47,7 @@ export default function App() {
           <ScrollToTop />
           <CustomCursor />
           <AuthModal />
-          <div className="min-h-screen bg-[#FAFAFA] text-[#111111] font-sans antialiased flex flex-col justify-between relative selection:bg-[#FF3B30] selection:text-white noise-overlay">
+          <div className="min-h-screen bg-[#FAFAFA] text-[#111111] font-sans antialiased flex flex-col justify-between relative selection:bg-[#6d001a] selection:text-white noise-overlay">
             <Navbar />
             <main className="grow">
               <Suspense fallback={<PageSkeleton />}>

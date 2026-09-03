@@ -37,21 +37,21 @@ export function Footer() {
     <div className="w-full overflow-hidden border-b border-white/10 pb-8 mb-16 select-none">
       <div className="animate-marquee flex items-center whitespace-nowrap gap-12 text-3xl md:text-5xl lg:text-7xl font-syne font-bold uppercase tracking-tight text-white/30">
         <span>SPY GRAPHIX CREATIVE AGENCY</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>AWWWARDS STUDIO OF THE YEAR</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>India</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>Mumbai</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>Delhi</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>TOKYO</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>SPY GRAPHIX CREATIVE AGENCY</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
         <span>AWWWARDS STUDIO OF THE YEAR</span>
-        <span className="text-[#FF3B30]">•</span>
+        <span className="text-[#6d001a]">•</span>
       </div>
     </div>
 
@@ -62,7 +62,7 @@ export function Footer() {
       }
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end border-b border-white/10 pb-16">
         <div className="lg:col-span-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-widest text-[#FF3B30]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-widest text-[#6d001a]">
             <Sparkles className="w-3.5 h-3.5" /> Start A Conversation
           </div>
           <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white font-light leading-none">
@@ -77,7 +77,7 @@ export function Footer() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-between bg-white text-[#111111] hover:bg-[#FF3B30] hover:text-white px-8 py-5 rounded-2xl text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-2xl group"
+            className="inline-flex items-center justify-between bg-white text-[#111111] hover:bg-[#6d001a] hover:text-white px-8 py-5 rounded-2xl text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-2xl group"
           >
             <span>Book Creative Discovery</span>
             <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -95,7 +95,7 @@ export function Footer() {
         }
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-[#FF3B30]" />
+            <span className="w-3 h-3 rounded-full bg-[#6d001a]" />
             <span className="font-syne font-extrabold text-2xl tracking-tight text-white uppercase">
               SPY GRAPHIX
             </span>
@@ -111,7 +111,7 @@ export function Footer() {
             <label className="text-xs font-semibold text-white/80 uppercase tracking-wider block">
               Subscribe to Creative Journal
             </label>
-            <div className="flex items-center bg-white/5 border border-white/10 rounded-2xl p-1.5 focus-within:border-[#FF3B30] transition-colors">
+            <div className="flex items-center bg-white/5 border border-white/10 rounded-2xl p-1.5 focus-within:border-[#6d001a] transition-colors">
               <input
                 type="email"
                 value={email}
@@ -122,13 +122,13 @@ export function Footer() {
               <button
                 type="submit"
                 disabled={subscribing}
-                className="bg-[#FF3B30] hover:bg-[#E02E24] text-white p-2.5 rounded-xl transition-all disabled:opacity-50"
+                className="bg-[#6d001a] hover:bg-[#E02E24] text-white p-2.5 rounded-xl transition-all disabled:opacity-50"
                 aria-label="Subscribe"
               >
                 <Send className="w-3.5 h-3.5" />
               </button>
             </div>
-            {subscribedMsg && <p className="text-[11px] text-[#FF3B30] font-medium flex items-center gap-1">
+            {subscribedMsg && <p className="text-[11px] text-[#6d001a] font-medium flex items-center gap-1">
               <Check className="w-3 h-3" /> {subscribedMsg}
             </p>}
           </form>
@@ -140,13 +140,13 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="text-xs font-extrabold text-white/40 uppercase tracking-widest">Navigation</h4>
           <ul className="space-y-2.5 text-xs text-white/80 font-medium">
-            <li><Link to="/" className="hover:text-[#FF3B30] transition-colors">Works & Showcase</Link></li>
-            <li><Link to="/services" className="hover:text-[#FF3B30] transition-colors">Services Directory</Link></li>
-            <li><Link to="/portfolio" className="hover:text-[#FF3B30] transition-colors">Case Studies</Link></li>
-            <li><Link to="/about" className="hover:text-[#FF3B30] transition-colors">About Studio</Link></li>
-            <li><Link to="/blog" className="hover:text-[#FF3B30] transition-colors">Creative Journal</Link></li>
-            <li><Link to="/contact" className="hover:text-[#FF3B30] transition-colors">Contact Us</Link></li>
-            <li><Link to="/admin" className="hover:text-[#FF3B30] transition-colors text-white/50">Admin Panel</Link></li>
+            <li><Link to="/" className="hover:text-[#6d001a] transition-colors">Works & Showcase</Link></li>
+            <li><Link to="/services" className="hover:text-[#6d001a] transition-colors">Services Directory</Link></li>
+            <li><Link to="/portfolio" className="hover:text-[#6d001a] transition-colors">Case Studies</Link></li>
+            <li><Link to="/about" className="hover:text-[#6d001a] transition-colors">About Studio</Link></li>
+            <li><Link to="/blog" className="hover:text-[#6d001a] transition-colors">Creative Journal</Link></li>
+            <li><Link to="/contact" className="hover:text-[#6d001a] transition-colors">Contact Us</Link></li>
+            <li><Link to="/admin" className="hover:text-[#6d001a] transition-colors text-white/50">Admin Panel</Link></li>
           </ul>
         </div>
 
@@ -156,11 +156,11 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="text-xs font-extrabold text-white/40 uppercase tracking-widest">Capabilities</h4>
           <ul className="space-y-2.5 text-xs text-white/80 font-medium">
-            <li><Link to="/services/branding-and-identity" className="hover:text-[#FF3B30] transition-colors">Branding & Identity</Link></li>
-            <li><Link to="/services/packaging-design" className="hover:text-[#FF3B30] transition-colors">Packaging Design</Link></li>
-            <li><Link to="/services/website-and-ui" className="hover:text-[#FF3B30] transition-colors">Website & UI/UX</Link></li>
-            <li><Link to="/services/motion-graphics" className="hover:text-[#FF3B30] transition-colors">Motion Graphics</Link></li>
-            <li><Link to="/services/ai-creative" className="hover:text-[#FF3B30] transition-colors">AI Creative Studio</Link></li>
+            <li><Link to="/services/branding-and-identity" className="hover:text-[#6d001a] transition-colors">Branding & Identity</Link></li>
+            <li><Link to="/services/packaging-design" className="hover:text-[#6d001a] transition-colors">Packaging Design</Link></li>
+            <li><Link to="/services/website-and-ui" className="hover:text-[#6d001a] transition-colors">Website & UI/UX</Link></li>
+            <li><Link to="/services/motion-graphics" className="hover:text-[#6d001a] transition-colors">Motion Graphics</Link></li>
+            <li><Link to="/services/ai-creative" className="hover:text-[#6d001a] transition-colors">AI Creative Studio</Link></li>
           </ul>
         </div>
 
@@ -180,7 +180,7 @@ export function Footer() {
             </div>
             <div className="pt-2">
               <p className="text-[11px] text-white/40 uppercase font-bold">Direct Email</p>
-              <a href="mailto:hello@spygraphix.com" className="text-white font-medium hover:text-[#FF3B30]">hello@spygraphix.com</a>
+              <a href="mailto:hello@spygraphix.com" className="text-white font-medium hover:text-[#6d001a]">hello@spygraphix.com</a>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ export function Footer() {
 
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-2 bg-white/10 hover:bg-[#FF3B30] text-white px-4 py-2 rounded-full transition-all text-xs uppercase font-bold tracking-wider"
+          className="flex items-center gap-2 bg-white/10 hover:bg-[#6d001a] text-white px-4 py-2 rounded-full transition-all text-xs uppercase font-bold tracking-wider"
         >
           <span>Back to top</span>
           <ArrowUp className="w-3.5 h-3.5" />

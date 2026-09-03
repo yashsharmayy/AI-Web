@@ -76,7 +76,7 @@ export function ServiceDetailPage() {
   if (!service) {
     return <div className="min-h-screen flex flex-col items-center justify-center pt-24 space-y-4 text-center">
       <h2 className="text-3xl font-serif">Service Not Found</h2>
-      <Link to="/services" className="text-xs font-bold uppercase tracking-wider text-[#FF3B30]">
+      <Link to="/services" className="text-xs font-bold uppercase tracking-wider text-[#6d001a]">
         ← Back to All Services
       </Link>
     </div>;
@@ -93,7 +93,7 @@ export function ServiceDetailPage() {
       >
         <ChevronLeft className="w-4 h-4" /> All Capabilities
       </Link>
-      <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] bg-[#FF3B30]/10 px-4 py-1.5 rounded-full">
+      <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] bg-[#6d001a]/10 px-4 py-1.5 rounded-full">
         {service.category}
       </span>
     </div>
@@ -113,7 +113,7 @@ export function ServiceDetailPage() {
         <div className="pt-4 flex flex-wrap items-center gap-4">
           <button
             onClick={() => setModalOpen(true)}
-            className="bg-[#111111] hover:bg-[#FF3B30] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xl flex items-center gap-2"
+            className="bg-[#111111] hover:bg-[#6d001a] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xl flex items-center gap-2"
             data-cursor="INQUIRE"
           >
             <span>Request Project Proposal</span>
@@ -140,7 +140,7 @@ export function ServiceDetailPage() {
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {service.subServices.map((sub, idx) => <div key={idx} className="bg-[#F6F6F6] p-4 rounded-2xl flex items-center gap-3">
-          <CheckCircle2 className="w-4 h-4 text-[#FF3B30] shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[#6d001a] shrink-0" />
           <span className="text-xs font-semibold text-[#111111]">{sub}</span>
         </div>)}
       </div>
@@ -151,7 +151,7 @@ export function ServiceDetailPage() {
     }
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-10 border border-black/8 shadow-soft space-y-6">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] flex items-center gap-1.5">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5" /> Key Advantages
         </span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">
@@ -159,14 +159,14 @@ export function ServiceDetailPage() {
         </h3>
         <ul className="space-y-3">
           {service.benefits.map((b, i) => <li key={i} className="flex items-start gap-3 text-xs text-[#444444] leading-relaxed">
-            <Check className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
+            <Check className="w-4 h-4 text-[#6d001a] shrink-0 mt-0.5" />
             <span>{b}</span>
           </li>)}
         </ul>
       </div>
 
       <div className="bg-[#FFFFFF] rounded-4xl p-8 md:p-10 border border-black/8 shadow-soft space-y-6">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
           Deliverables Package
         </span>
         <h3 className="text-2xl font-bold font-syne text-[#111111]">
@@ -175,7 +175,7 @@ export function ServiceDetailPage() {
         <div className="space-y-3">
           {service.deliverables.map((deliv, i) => <div key={i} className="bg-[#F6F6F6] p-4 rounded-2xl text-xs font-medium text-[#111111] flex items-center justify-between">
             <span>{deliv}</span>
-            <span className="text-[10px] uppercase font-bold text-[#FF3B30] bg-[#FF3B30]/10 px-2.5 py-1 rounded-md">Master Asset</span>
+            <span className="text-[10px] uppercase font-bold text-[#6d001a] bg-[#6d001a]/10 px-2.5 py-1 rounded-md">Master Asset</span>
           </div>)}
         </div>
       </div>
@@ -186,7 +186,7 @@ export function ServiceDetailPage() {
     }
     <div className="space-y-8">
       <div className="text-center space-y-2">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
           Execution Strategy
         </span>
         <h2 className="text-3xl font-serif text-[#111111] font-light">
@@ -196,7 +196,7 @@ export function ServiceDetailPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {service.workflow.map((wf, idx) => <div key={idx} className="bg-[#FFFFFF] rounded-3xl p-6 border border-black/8 shadow-soft space-y-3 relative">
-          <span className="text-3xl font-extrabold font-syne text-[#FF3B30]">{wf.step}</span>
+          <span className="text-3xl font-extrabold font-syne text-[#6d001a]">{wf.step}</span>
           <h4 className="text-base font-bold text-[#111111]">{wf.title}</h4>
           <p className="text-xs text-[#666666] leading-relaxed">{wf.desc}</p>
         </div>)}
@@ -211,7 +211,7 @@ export function ServiceDetailPage() {
     }
     <div className="space-y-8 pt-8 border-t border-black/8">
       <div className="text-center space-y-2">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+        <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
           Transparent Investment
         </span>
         <h2 className="text-3xl font-serif text-[#111111] font-light">
@@ -225,7 +225,7 @@ export function ServiceDetailPage() {
           className={`rounded-4xl p-8 border transition-all space-y-6 flex flex-col justify-between ${selectedTier === tier.tier ? "bg-[#111111] text-white border-black shadow-2xl scale-105" : "bg-[#FFFFFF] text-[#111111] border-black/8 shadow-soft"}`}
         >
           <div className="space-y-4">
-            <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${selectedTier === tier.tier ? "bg-[#FF3B30] text-white" : "bg-[#F6F6F6] text-[#777777]"}`}>
+            <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${selectedTier === tier.tier ? "bg-[#6d001a] text-white" : "bg-[#F6F6F6] text-[#777777]"}`}>
               {tier.tier}
             </span>
             <div className="text-4xl font-extrabold font-syne">
@@ -233,7 +233,7 @@ export function ServiceDetailPage() {
             </div>
             <ul className="space-y-2.5 pt-4 border-t border-current/10 text-xs">
               {tier.features.map((feat, fIdx) => <li key={fIdx} className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-[#FF3B30]" />
+                <Check className="w-3.5 h-3.5 text-[#6d001a]" />
                 <span>{feat}</span>
               </li>)}
             </ul>
@@ -244,7 +244,7 @@ export function ServiceDetailPage() {
               setSelectedTier(tier.tier);
               setModalOpen(true);
             }}
-            className={`w-full py-4 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all ${selectedTier === tier.tier ? "bg-[#FF3B30] hover:bg-[#E02E24] text-white" : "bg-[#F6F6F6] hover:bg-[#111111] hover:text-white text-[#111111]"}`}
+            className={`w-full py-4 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all ${selectedTier === tier.tier ? "bg-[#6d001a] hover:bg-[#E02E24] text-white" : "bg-[#F6F6F6] hover:bg-[#111111] hover:text-white text-[#111111]"}`}
           >
             Select {tier.tier}
           </button>
@@ -311,7 +311,7 @@ export function ServiceDetailPage() {
 
           <button
             type="submit"
-            className="w-full bg-[#FF3B30] hover:bg-[#E02E24] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+            className="w-full bg-[#6d001a] hover:bg-[#E02E24] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
           >
             <Send className="w-4 h-4" /> Send Request For {selectedTier || "Custom Tier"}
           </button>

@@ -144,7 +144,7 @@ export const AuthModal = () => {
           /* Modal Header */
         }
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-full bg-[#111111] text-[#FF3B30] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-full bg-[#111111] text-[#6d001a] flex items-center justify-center mx-auto">
             <Shield className="w-6 h-6" />
           </div>
           <h2 className="text-2xl font-bold font-syne text-[#111111]">
@@ -178,7 +178,7 @@ export const AuthModal = () => {
             <div className="grow">
               <h3 className="font-bold text-sm text-[#111111]">{user.name}</h3>
               <p className="text-xs text-[#777777]">{user.email}</p>
-              <span className="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-[#FF3B30]/10 text-[#FF3B30]">
+              <span className="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-[#6d001a]/10 text-[#6d001a]">
                 {user.role}
               </span>
             </div>
@@ -206,7 +206,7 @@ export const AuthModal = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#111111] hover:bg-[#FF3B30] text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
+              className="w-full bg-[#111111] hover:bg-[#6d001a] text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
             >
               Save Profile
             </button>
@@ -249,7 +249,7 @@ export const AuthModal = () => {
         font-bold
         uppercase
         tracking-wider
-        hover:bg-[#FF3B30]
+        hover:bg-[#6d001a]
         transition-all
         whitespace-nowrap
       "
@@ -311,7 +311,7 @@ export const AuthModal = () => {
                   className="
           w-full
           bg-[#111111]
-          hover:bg-[#FF3B30]
+          hover:bg-[#6d001a]
           text-white
           py-3
           rounded-xl
@@ -341,7 +341,7 @@ export const AuthModal = () => {
             </button>
             <button
               onClick={logout}
-              className="bg-[#FF3B30] hover:bg-red-700 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
+              className="bg-[#6d001a] hover:bg-red-700 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
             >
               <LogOut className="w-3.5 h-3.5" /> Logout
             </button>
@@ -385,7 +385,7 @@ export const AuthModal = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded border-gray-300 text-[#FF3B30] focus:ring-[#FF3B30]"
+                  className="rounded border-gray-300 text-[#6d001a] focus:ring-[#6d001a]"
                 />
                 Remember Me
               </label>
@@ -395,7 +395,7 @@ export const AuthModal = () => {
                   resetFeedback();
                   openAuthModal("forgot");
                 }}
-                className="text-[#FF3B30] font-bold hover:underline"
+                className="text-[#6d001a] font-bold hover:underline"
               >
                 Forgot Password?
               </button>
@@ -404,7 +404,7 @@ export const AuthModal = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#111111] hover:bg-[#FF3B30] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full bg-[#111111] hover:bg-[#6d001a] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
             >
               <Lock className="w-4 h-4" /> {loading ? "Signing in..." : "Sign In"}
             </button>
@@ -474,7 +474,7 @@ export const AuthModal = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#FF3B30] hover:bg-red-700 text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full bg-[#6d001a] hover:bg-red-700 text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
             >
               <UserIcon className="w-4 h-4" /> {loading ? "Registering..." : "Create Account"}
             </button>
@@ -514,7 +514,7 @@ export const AuthModal = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#111111] hover:bg-[#FF3B30] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full bg-[#111111] hover:bg-[#6d001a] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
             >
               <KeyRound className="w-4 h-4" /> Send Reset Link
             </button>

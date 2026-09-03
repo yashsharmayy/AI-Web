@@ -73,7 +73,7 @@ export function HomePage() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] flex items-center gap-1.5">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5" /> Core Capabilities
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#111111] font-light">
@@ -83,7 +83,7 @@ export function HomePage() {
           </div>
           <Link
             to="/services"
-            className="text-xs font-bold uppercase tracking-wider text-[#111111] hover:text-[#FF3B30] transition-colors flex items-center gap-1"
+            className="text-xs font-bold uppercase tracking-wider text-[#111111] hover:text-[#6d001a] transition-colors flex items-center gap-1"
           >
             Explore All 14 Services →
           </Link>
@@ -98,7 +98,7 @@ export function HomePage() {
             className="group bg-[#FFFFFF] rounded-3xl p-8 border border-black/8 shadow-soft hover:shadow-2xl transition-all duration-300 flex flex-col justify-between space-y-6 relative overflow-hidden"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F6F6F6] group-hover:bg-[#FF3B30] group-hover:text-white transition-colors flex items-center justify-center text-[#111111]">
+              <div className="w-12 h-12 rounded-2xl bg-[#F6F6F6] group-hover:bg-[#6d001a] group-hover:text-white transition-colors flex items-center justify-center text-[#111111]">
                 <Box className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold font-syne text-[#111111]">
@@ -140,7 +140,7 @@ export function HomePage() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30] flex items-center gap-1.5">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a] flex items-center gap-1.5">
               <Award className="w-3.5 h-3.5" /> Selected Works
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#111111] font-light">
@@ -191,12 +191,12 @@ export function HomePage() {
 
             <div className="px-3 pb-2 space-y-3">
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold font-syne text-[#111111] group-hover:text-[#FF3B30] transition-colors">
+                <h3 className="text-2xl font-bold font-syne text-[#111111] group-hover:text-[#6d001a] transition-colors">
                   {project.title}
                 </h3>
                 <Link
                   to={`/portfolio/${project.slug}`}
-                  className="w-10 h-10 rounded-full bg-[#F6F6F6] group-hover:bg-[#FF3B30] group-hover:text-white transition-colors flex items-center justify-center text-[#111111]"
+                  className="w-10 h-10 rounded-full bg-[#F6F6F6] group-hover:bg-[#6d001a] group-hover:text-white transition-colors flex items-center justify-center text-[#111111]"
                   data-cursor="CASE STUDY"
                 >
                   <ArrowUpRight className="w-5 h-5" />
@@ -211,7 +211,7 @@ export function HomePage() {
               }
               <div className="flex items-center gap-4 pt-2 border-t border-black/6 text-xs text-[#111111] font-semibold">
                 {project.impactMetrics.slice(0, 2).map((metric, i) => <div key={i} className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#6d001a]" />
                   <span>{metric.label}: <strong>{metric.value}</strong></span>
                 </div>)}
               </div>
@@ -233,7 +233,7 @@ export function HomePage() {
       <section className="bg-[#FFFFFF] py-20 border-y border-black/8">
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
               Our Creative Framework
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#111111] font-light">
@@ -249,7 +249,7 @@ export function HomePage() {
               { step: "03", title: "Refinement Sprint", desc: "Polishing micro-interactions, responsive tokens, and print dielines." },
               { step: "04", title: "Production Launch", desc: "4K media exports, WebGL performance tuning, and factory delivery." }
             ].map((p, i) => <div key={i} className="bg-[#F6F6F6] p-8 rounded-3xl space-y-4 relative border border-black/5">
-              <span className="font-syne text-4xl font-extrabold text-[#FF3B30]">
+              <span className="font-syne text-4xl font-extrabold text-[#6d001a]">
                 {p.step}
               </span>
               <h3 className="text-xl font-bold font-syne text-[#111111]">
@@ -268,7 +268,7 @@ export function HomePage() {
       }
       <section className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
             Client Endorsements
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif text-[#111111] font-light">
@@ -283,7 +283,7 @@ export function HomePage() {
             className="bg-[#FFFFFF] rounded-3xl p-8 border border-black/8 shadow-soft flex flex-col justify-between space-y-6"
           >
             <div className="space-y-4">
-              <div className="flex items-center gap-1 text-[#FF3B30]">
+              <div className="flex items-center gap-1 text-[#6d001a]">
                 {[...Array(test.rating)].map((_, i) => <Sparkles key={i} className="w-4 h-4 fill-current" />)}
               </div>
               <p className="text-sm text-[#333333] leading-relaxed italic">
@@ -312,7 +312,7 @@ export function HomePage() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
               Creative Journal
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#111111] font-light">
@@ -322,7 +322,7 @@ export function HomePage() {
           </div>
           <Link
             to="/blog"
-            className="text-xs font-bold uppercase tracking-wider text-[#111111] hover:text-[#FF3B30] transition-colors"
+            className="text-xs font-bold uppercase tracking-wider text-[#111111] hover:text-[#6d001a] transition-colors"
           >
             Read All Articles →
           </Link>
@@ -346,7 +346,7 @@ export function HomePage() {
                 <span>{blog.category}</span>
                 <span>{blog.readTime}</span>
               </div>
-              <h3 className="text-lg font-bold font-syne text-[#111111] group-hover:text-[#FF3B30] transition-colors line-clamp-2">
+              <h3 className="text-lg font-bold font-syne text-[#111111] group-hover:text-[#6d001a] transition-colors line-clamp-2">
                 {blog.title}
               </h3>
               <p className="text-xs text-[#666666] line-clamp-2">
@@ -362,7 +362,7 @@ export function HomePage() {
       }
       <section className="max-w-5xl mx-auto px-6 md:px-12 space-y-8">
         <div className="text-center space-y-3">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF3B30]">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#6d001a]">
             Frequently Asked Questions
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif text-[#111111] font-light">
@@ -380,10 +380,10 @@ export function HomePage() {
             >
               <button
                 onClick={() => setOpenFaq(isOpen ? null : faq.id)}
-                className="w-full p-6 text-left flex items-center justify-between gap-4 text-[#111111] font-bold font-syne text-lg hover:text-[#FF3B30] transition-colors"
+                className="w-full p-6 text-left flex items-center justify-between gap-4 text-[#111111] font-bold font-syne text-lg hover:text-[#6d001a] transition-colors"
               >
                 <span>{faq.question}</span>
-                {isOpen ? <Minus className="w-5 h-5 text-[#FF3B30] shrink-0" /> : <Plus className="w-5 h-5 text-[#777777] shrink-0" />}
+                {isOpen ? <Minus className="w-5 h-5 text-[#6d001a] shrink-0" /> : <Plus className="w-5 h-5 text-[#777777] shrink-0" />}
               </button>
               {isOpen && <div className="px-6 pb-6 text-xs text-[#555555] leading-relaxed border-t border-black/5 pt-4">
                 {faq.answer}

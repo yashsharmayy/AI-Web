@@ -67,7 +67,7 @@ const ResetPassword = () => {
 
                 {/* Logo / Icon */}
                 <div className="text-center mb-7">
-                    <div className="w-14 h-14 mx-auto rounded-full bg-[#111111] text-[#FF3B30] flex items-center justify-center">
+                    <div className="w-14 h-14 mx-auto rounded-full bg-[#111111] text-[#6d001a] flex items-center justify-center">
                         <Shield className="w-7 h-7" />
                     </div>
 
@@ -150,7 +150,7 @@ const ResetPassword = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-[#111111] hover:bg-[#FF3B30] disabled:opacity-50 text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all"
+                            className="w-full bg-[#111111] hover:bg-[#6d001a] disabled:opacity-50 text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all"
                         >
                             {loading ? "Resetting Password..." : "Reset Password"}
                         </button>

@@ -210,7 +210,7 @@ function Loader3DScene() {
       <directionalLight
         position={[-4, -3, -4]}
         intensity={0.7}
-        color="#FF3B30"
+        color="#6d001a"
       />
 
       {/* =====================================================
@@ -774,7 +774,7 @@ export function IntroLoader() {
           -translate-y-1/2
           w-88
           h-88
-          bg-[#FF3B30]/5
+          bg-[#6d001a]/5
           rounded-full
           pointer-events-none
         "
@@ -811,7 +811,7 @@ export function IntroLoader() {
               w-2.5
               h-2.5
               rounded-full
-              bg-[#FF3B30]
+              bg-[#6d001a]
             "
           />
 
@@ -832,7 +832,7 @@ export function IntroLoader() {
               className="
                 w-3.5
                 h-3.5
-                text-[#FF3B30]
+                text-[#6d001a]
               "
             />
 
@@ -878,7 +878,7 @@ export function IntroLoader() {
               bg-white
               border
               border-black/10
-              hover:border-[#FF3B30]
+              hover:border-[#6d001a]
               transition-colors
               cursor-pointer
             "
@@ -902,7 +902,7 @@ export function IntroLoader() {
                 className="
                   w-3.5
                   h-3.5
-                  text-[#FF3B30]
+                  text-[#6d001a]
                 "
               />
             )}
@@ -934,7 +934,7 @@ export function IntroLoader() {
               rounded-full
               bg-[#111111]
               text-white
-              hover:bg-[#FF3B30]
+              hover:bg-[#6d001a]
               transition-colors
               cursor-pointer
             "
@@ -1057,7 +1057,7 @@ export function IntroLoader() {
               md:text-base
               font-bold
               uppercase
-              text-[#FF3B30]
+              text-[#6d001a]
               tracking-[0.35em]
               flex
               items-center
@@ -1069,7 +1069,7 @@ export function IntroLoader() {
               className="
                 w-8
                 h-0.5
-                bg-[#FF3B30]
+                bg-[#6d001a]
                 hidden
                 sm:inline-block
               "
@@ -1186,7 +1186,7 @@ export function IntroLoader() {
                   h-16
                   rounded-full
                   border-2
-                  border-[#FF3B30]
+                  border-[#6d001a]
                   border-t-transparent
                   animate-spin
                   mb-4
@@ -1289,7 +1289,7 @@ export function IntroLoader() {
 
             <span
               className="
-                text-[#FF3B30]
+                text-[#6d001a]
                 font-bold
                 uppercase
               "
@@ -1339,7 +1339,7 @@ export function IntroLoader() {
             ref={progressBarRef}
             className="
               h-full
-              bg-[#FF3B30]
+              bg-[#6d001a]
               rounded-full
             "
             style={{

@@ -45,9 +45,9 @@ export function ServicesPage() {
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-12">
         <div className="flex items-center gap-2 mb-5">
-          <span className="w-2 h-2 rounded-full bg-[#FF3B30]" />
+          <span className="w-2 h-2 rounded-full bg-[#6d001a]" />
 
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#FF3B30]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#6d001a]">
             Complete Service Architecture
           </span>
         </div>
@@ -79,7 +79,7 @@ export function ServicesPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search services (e.g. Logo, Dieline, 3D, Packaging)..."
-              className="w-full bg-[#F6F6F6] text-xs text-[#111111] pl-10 pr-4 py-3 rounded-2xl outline-none focus:ring-2 focus:ring-[#FF3B30]/30"
+              className="w-full bg-[#F6F6F6] text-xs text-[#111111] pl-10 pr-4 py-3 rounded-2xl outline-none focus:ring-2 focus:ring-[#6d001a]/30"
             />
           </div>
 
@@ -130,7 +130,7 @@ export function ServicesPage() {
 
               {/* Category */}
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF3B30] bg-[#FF3B30]/10 px-3 py-1 rounded-full">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#6d001a] bg-[#6d001a]/10 px-3 py-1 rounded-full">
                   {service.category}
                 </span>
 
@@ -161,7 +161,7 @@ export function ServicesPage() {
                       key={`${service.id}-${index}`}
                       className="flex items-center gap-2 text-xs text-[#555555]"
                     >
-                      <span className="w-1 h-1 rounded-full bg-[#FF3B30]" />
+                      <span className="w-1 h-1 rounded-full bg-[#6d001a]" />
                       {sub}
                     </div>
                   ))}
@@ -191,7 +191,7 @@ export function ServicesPage() {
               {/* IMPORTANT: use service.slug directly */}
               <Link
                 to={`/services/${service.slug}`}
-                className="bg-[#111111] hover:bg-[#FF3B30] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+                className="bg-[#111111] hover:bg-[#6d001a] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
                 data-cursor="EXPLORE"
               >
                 <span>Details</span>

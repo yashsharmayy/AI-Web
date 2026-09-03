@@ -417,7 +417,7 @@ export function InteractiveHero3D() {
                 h-10
                 rounded-full
                 border-2
-                border-[#FF3B30]
+                border-[#6d001a]
                 border-t-transparent
                 animate-spin
               "
@@ -455,7 +455,7 @@ export function InteractiveHero3D() {
           <directionalLight
             position={[-8, -6, -4]}
             intensity={0.7}
-            color="#FF3B30"
+            color="#6d001a"
           />
 
           <pointLight
@@ -519,7 +519,7 @@ export function InteractiveHero3D() {
             w-2
             h-2
             rounded-full
-            bg-[#FF3B30]
+            bg-[#6d001a]
             animate-ping
           "
         />

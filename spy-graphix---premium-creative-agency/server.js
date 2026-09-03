@@ -123,7 +123,7 @@ Glass refractive elements, warm ivory palette (#FAFAFA), high-contrast Cormorant
 Floating liquid chrome rings with light dispersion shaders and slow orbital rotation.
 
 4. Color Palette:
-#FAFAFA Canvas | #111111 Charcoal | #FF3B30 Electric Red Accent.`,
+#FAFAFA Canvas | #111111 Charcoal | #6d001a Electric Red Accent.`,
           source: "creative-engine-preset",
         });
       }

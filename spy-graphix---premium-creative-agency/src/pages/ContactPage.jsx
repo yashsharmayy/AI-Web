@@ -239,7 +239,7 @@ export function ContactPage() {
       /* Header */
     }
     <div className="space-y-4 max-w-3xl">
-      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF3B30]/10 text-[#FF3B30] text-xs font-semibold uppercase tracking-wider">
+      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#6d001a]/10 text-[#6d001a] text-xs font-semibold uppercase tracking-wider">
         <Sparkles className="w-3.5 h-3.5" /> Start A Conversation
       </div>
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#111111] font-light leading-tight">
@@ -281,7 +281,7 @@ export function ContactPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Julian De Rothschild"
-                className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FF3B30]/30"
+                className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#6d001a]/30"
               />
             </div>
 
@@ -295,7 +295,7 @@ export function ContactPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="julian@brand.com"
-                className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FF3B30]/30"
+                className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#6d001a]/30"
               />
             </div>
           </div>
@@ -309,7 +309,7 @@ export function ContactPage() {
               value={company}
               onChange={(e) => setCompany(e.target.value)}
               placeholder="e.g. Aetheria Mumbai"
-              className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FF3B30]/30"
+              className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#6d001a]/30"
             />
           </div>
 
@@ -377,14 +377,14 @@ export function ContactPage() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Tell us about your brand vision, deliverables required, target launch dates, or key design references..."
-              className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FF3B30]/30 resize-none"
+              className="w-full bg-[#F6F6F6] border border-black/8 rounded-2xl p-4 text-xs text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#6d001a]/30 resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#FF3B30] hover:bg-[#E02E24] text-white py-5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2"
+            className="w-full bg-[#6d001a] hover:bg-[#E02E24] text-white py-5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2"
             data-cursor="SUBMIT"
           >
             <Send className="w-4 h-4" /> {loading ? "Transmitting Brief..." : "Send Inquiry To Creative Director"}
@@ -402,7 +402,7 @@ export function ContactPage() {
           /* WhatsApp Direct Connect */
         }
         <div className="bg-[#111111] text-white p-8 rounded-4xl space-y-4 shadow-xl">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF3B30]">Fast Response Line</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#6d001a]">Fast Response Line</span>
           <h3 className="text-2xl font-bold font-syne">Need Instant Consultation?</h3>
           <p className="text-xs text-white/60 leading-relaxed">
             Connect directly with our creative team on WhatsApp for immediate feedback on dieline specs or custom quote estimates.
@@ -423,7 +423,7 @@ export function ContactPage() {
         <div className="bg-[#FFFFFF] rounded-4xl p-6 border border-black/8 shadow-soft space-y-4">
           <div className="flex items-center justify-between">
             <h4 className="text-sm font-bold font-syne text-[#111111] flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#FF3B30]" /> Interactive Studio Locations
+              <MapPin className="w-4 h-4 text-[#6d001a]" /> Interactive Studio Locations
             </h4>
             <span className="text-[10px] font-bold uppercase text-[#777777]">India • Delhi</span>
           </div>
@@ -435,7 +435,7 @@ export function ContactPage() {
               className="w-full h-full object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center text-white p-4 text-center space-y-2 backdrop-blur-[1px]">
-              <div className="w-10 h-10 rounded-full bg-[#FF3B30] text-white flex items-center justify-center font-bold text-sm shadow-2xl animate-bounce">
+              <div className="w-10 h-10 rounded-full bg-[#6d001a] text-white flex items-center justify-center font-bold text-sm shadow-2xl animate-bounce">
                 <MapPin className="w-5 h-5" />
               </div>
               <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-bold">
@@ -446,15 +446,15 @@ export function ContactPage() {
 
           <div className="space-y-3 pt-2 text-xs text-[#555555]">
             <div className="flex items-start gap-3">
-              <Mail className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-[#6d001a] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-[#111111]">Executive Email</p>
-                <a href="mailto:hello@spygraphix.com" className="hover:text-[#FF3B30]">hello@spygraphix.com</a>
+                <a href="mailto:hello@spygraphix.com" className="hover:text-[#6d001a]">hello@spygraphix.com</a>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <Phone className="w-4 h-4 text-[#FF3B30] shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#6d001a] shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-[#111111]">Studio Telephone</p>
                 <p>+91 87506 34117</p>
