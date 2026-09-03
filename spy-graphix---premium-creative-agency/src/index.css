@@ -137,42 +137,777 @@
   }
 }
 
-/* =========================================
-   PORTFOLIO HERO MARQUEE
-========================================= */
+/* ================================================================
+   SPYGRAPHIX CREATIVE HERO
+================================================================ */
 
-@keyframes portfolio-left {
-  from {
-    transform: translateX(0);
+.spy-hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 132px);
+  min-height: 650px;
+  overflow: hidden;
+
+  background: #171717;
+  color: #f5f3ef;
+}
+
+/* ================================================================
+   GRID
+================================================================ */
+
+.spy-hero-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.035;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   GLOW
+================================================================ */
+
+.spy-hero-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: 42%;
+  top: 32%;
+
+  border-radius: 50%;
+
+  opacity: 0.09;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   TOP META
+================================================================ */
+
+.spy-hero-top {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 3.2%;
+}
+
+.spy-hero-brand {
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.3em;
+}
+
+.spy-hero-studio {
+  font-size: 9px;
+
+  letter-spacing: 0.32em;
+
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.spy-hero-year {
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ================================================================
+   ARTWORK BASE
+================================================================ */
+
+.spy-artwork {
+  position: absolute;
+
+  z-index: 8;
+
+  display: block;
+
+  overflow: hidden;
+
+  transform: rotate(var(--rotation));
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #222;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.42);
+
+  transition:
+    transform 500ms ease,
+    box-shadow 500ms ease;
+
+  will-change: transform;
+}
+
+.spy-artwork:hover {
+  z-index: 35;
+
+  transform: rotate(0deg) translateY(-5px);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+.spy-artwork-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.spy-artwork img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 700ms ease;
+}
+
+.spy-artwork:hover img {
+  transform: scale(1.035);
+}
+
+/* ================================================================
+   ARTWORK POSITIONS
+================================================================ */
+
+/* LEFT */
+
+.spy-artwork-one {
+  left: 2.5%;
+  top: 27%;
+
+  width: 350px;
+  height: 235px;
+}
+
+/* CENTER TOP */
+
+.spy-artwork-two {
+  left: 42%;
+  top: 12%;
+
+  width: 325px;
+  height: 220px;
+}
+
+/* RIGHT */
+
+.spy-artwork-three {
+  right: 3%;
+
+  top: 25%;
+
+  width: 350px;
+  height: 235px;
+}
+
+/* BOTTOM RIGHT */
+
+.spy-artwork-four {
+  right: 18%;
+
+  bottom: 8%;
+
+  width: 300px;
+  height: 200px;
+}
+
+/* ================================================================
+   ARTWORK OVERLAY
+================================================================ */
+
+.spy-artwork-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   ARTWORK NUMBER
+================================================================ */
+
+.spy-artwork-number {
+  position: absolute;
+
+  top: 12px;
+  left: 14px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ================================================================
+   ARTWORK INFO
+================================================================ */
+
+.spy-artwork-info {
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+}
+
+.spy-artwork-title {
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+
+  color: white;
+}
+
+.spy-artwork-category {
+  margin-top: 4px;
+
+  font-size: 7px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ================================================================
+   ARTWORK ARROW
+================================================================ */
+
+.spy-artwork-arrow {
+  position: absolute;
+
+  top: 11px;
+  right: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #171717;
+
+  opacity: 0;
+
+  transform: translateY(-5px);
+
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+}
+
+.spy-artwork:hover .spy-artwork-arrow {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ================================================================
+   VIGNETTE
+================================================================ */
+
+.spy-hero-vignette {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at center,
+    transparent 25%,
+    rgba(23, 23, 23, 0.12) 55%,
+    rgba(23, 23, 23, 0.65) 100%
+  );
+}
+
+/* ================================================================
+   CATEGORY
+================================================================ */
+
+.spy-hero-category {
+  position: absolute;
+
+  z-index: 40;
+
+  left: 3.2%;
+  top: 28%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.spy-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+}
+
+/* ================================================================
+   MAIN TITLE
+================================================================ */
+
+.spy-hero-title {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 25;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.spy-title-line {
+  font-size: clamp(90px, 14.5vw, 225px);
+
+  font-weight: 900;
+
+  line-height: 0.66;
+
+  letter-spacing: -0.1em;
+
+  white-space: nowrap;
+}
+
+/* MAKE */
+
+.spy-title-make {
+  margin-left: 3%;
+
+  color: #f5f3ef;
+}
+
+/* THEM */
+
+.spy-title-them {
+  margin-left: 18%;
+
+  color: transparent;
+
+  -webkit-text-stroke: 2px rgba(245, 243, 239, 0.9);
+}
+
+/* LOOK */
+
+.spy-title-look {
+  margin-left: 8%;
+
+  color: #f5f3ef;
+}
+
+/* ================================================================
+   CENTER LABEL
+================================================================ */
+
+.spy-center-label {
+  position: absolute;
+
+  z-index: 45;
+
+  left: 53%;
+  top: 51%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  background: rgba(23, 23, 23, 0.55);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 7px;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.spy-center-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+/* ================================================================
+   BOTTOM LEFT
+================================================================ */
+
+.spy-hero-bottom-left {
+  position: absolute;
+
+  z-index: 45;
+
+  left: 3.2%;
+  bottom: 28px;
+
+  width: 270px;
+}
+
+.spy-hero-bottom-left p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.spy-hero-bottom-left a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 13px;
+
+  color: white;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+
+  text-decoration: none;
+}
+
+.spy-hero-bottom-left a:hover {
+  opacity: 0.7;
+}
+
+/* ================================================================
+   BOTTOM RIGHT
+================================================================ */
+
+.spy-hero-bottom-right {
+  position: absolute;
+
+  z-index: 45;
+
+  right: 3.2%;
+  bottom: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 4px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+
+  color: rgba(255, 255, 255, 0.32);
+}
+
+/* ================================================================
+   BOTTOM LINE
+================================================================ */
+
+.spy-hero-bottom-line {
+  position: absolute;
+
+  z-index: 50;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.spy-hero-bottom-line span {
+  position: absolute;
+
+  left: 3.2%;
+  bottom: 10px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.3em;
+
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.spy-progress {
+  position: absolute;
+
+  right: 3.2%;
+  bottom: 10px;
+
+  width: 120px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.spy-progress div {
+  width: 35%;
+  height: 100%;
+}
+
+/* ================================================================
+   TABLET
+================================================================ */
+
+@media (max-width: 1100px) {
+  .spy-artwork-one {
+    width: 290px;
+    height: 195px;
   }
 
-  to {
-    transform: translateX(-50%);
+  .spy-artwork-two {
+    width: 280px;
+    height: 190px;
+  }
+
+  .spy-artwork-three {
+    width: 290px;
+    height: 195px;
+  }
+
+  .spy-artwork-four {
+    width: 250px;
+    height: 170px;
   }
 }
 
-@keyframes portfolio-right {
-  from {
-    transform: translateX(-50%);
+/* ================================================================
+   MOBILE
+================================================================ */
+
+@media (max-width: 768px) {
+  .spy-hero {
+    height: calc(100vh - 90px);
+    min-height: 650px;
   }
 
-  to {
-    transform: translateX(0);
+  .spy-hero-top {
+    padding: 22px 20px;
+  }
+
+  .spy-hero-studio {
+    display: none;
+  }
+
+  .spy-hero-brand {
+    font-size: 9px;
+  }
+
+  .spy-hero-year {
+    font-size: 9px;
+  }
+
+  /* artwork */
+
+  .spy-artwork-one {
+    left: -20px;
+    top: 25%;
+
+    width: 190px;
+    height: 130px;
+  }
+
+  .spy-artwork-two {
+    left: auto;
+    right: -35px;
+    top: 15%;
+
+    width: 190px;
+    height: 130px;
+  }
+
+  .spy-artwork-three {
+    right: -25px;
+    top: 60%;
+
+    width: 190px;
+    height: 130px;
+  }
+
+  .spy-artwork-four {
+    left: 5%;
+    right: auto;
+    bottom: 16%;
+
+    width: 180px;
+    height: 120px;
+  }
+
+  /* category */
+
+  .spy-hero-category {
+    left: 20px;
+    top: 31%;
+
+    font-size: 6px;
+    gap: 8px;
+  }
+
+  .spy-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* title */
+
+  .spy-title-line {
+    font-size: clamp(70px, 20vw, 120px);
+  }
+
+  .spy-title-make {
+    margin-left: 0;
+  }
+
+  .spy-title-them {
+    margin-left: 10%;
+  }
+
+  .spy-title-look {
+    margin-left: 4%;
+  }
+
+  /* center */
+
+  .spy-center-label {
+    display: none;
+  }
+
+  /* bottom */
+
+  .spy-hero-bottom-left {
+    left: 20px;
+    bottom: 24px;
+
+    width: 210px;
+  }
+
+  .spy-hero-bottom-left p {
+    font-size: 9px;
+  }
+
+  .spy-hero-bottom-right {
+    display: none;
+  }
+
+  .spy-hero-bottom-line span {
+    left: 20px;
+  }
+
+  .spy-progress {
+    right: 20px;
+    width: 70px;
+  }
+}
+@keyframes spyFloat {
+  0% {
+    translate: 0 0;
+  }
+
+  25% {
+    translate: 10px -8px;
+  }
+
+  50% {
+    translate: -5px 10px;
+  }
+
+  75% {
+    translate: 8px 5px;
+  }
+
+  100% {
+    translate: 0 0;
   }
 }
 
-.animate-portfolio-left {
-  animation: portfolio-left 35s linear infinite;
-}
-
-.animate-portfolio-right {
-  animation: portfolio-right 42s linear infinite;
-}
-
-/* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
-  .animate-portfolio-left,
-  .animate-portfolio-right {
-    animation: none;
+  .spy-float {
+    animation: none !important;
   }
 }

@@ -41,11 +41,9 @@ export function Navbar() {
      STATE
   ========================================================= */
 
-  const [scrolled, setScrolled] =
-    useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const [mobileMenuOpen, setMobileMenuOpen] =
-    useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [servicesDropdownOpen, setServicesDropdownOpen] =
     useState(false);
@@ -55,16 +53,14 @@ export function Navbar() {
      ROUTER
   ========================================================= */
 
-  const location =
-    useLocation();
+  const location = useLocation();
 
 
   /* =========================================================
      REFS
   ========================================================= */
 
-  const servicesRef =
-    useRef(null);
+  const servicesRef = useRef(null);
 
 
   /* =========================================================
@@ -74,11 +70,7 @@ export function Navbar() {
   useEffect(() => {
 
     const handleScroll = () => {
-
-      setScrolled(
-        window.scrollY > 20
-      );
-
+      setScrolled(window.scrollY > 20);
     };
 
     handleScroll();
@@ -90,12 +82,10 @@ export function Navbar() {
     );
 
     return () => {
-
       window.removeEventListener(
         "scroll",
         handleScroll
       );
-
     };
 
   }, []);
@@ -108,7 +98,6 @@ export function Navbar() {
   useEffect(() => {
 
     setMobileMenuOpen(false);
-
     setServicesDropdownOpen(false);
 
   }, [location.pathname]);
@@ -125,7 +114,6 @@ export function Navbar() {
       if (event.key === "Escape") {
 
         setServicesDropdownOpen(false);
-
         setMobileMenuOpen(false);
 
       }
@@ -186,13 +174,11 @@ export function Navbar() {
 
 
   /* =========================================================
-     CLOSE MOBILE MENU
+     MOBILE MENU
   ========================================================= */
 
   const closeMobileMenu = () => {
-
     setMobileMenuOpen(false);
-
   };
 
 
@@ -203,9 +189,17 @@ export function Navbar() {
   const desktopServices =
     INITIAL_SERVICES.slice(0, 6);
 
-
   const mobileServices =
     INITIAL_SERVICES.slice(0, 5);
+
+
+  /* =========================================================
+     ACTIVE LINK
+  ========================================================= */
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
 
   /* =========================================================
@@ -216,94 +210,158 @@ export function Navbar() {
 
     <header
       className={`
-        fixed
-        top-0
-        left-0
-        right-0
-        z-[9999]
-        px-4
-        sm:px-6
-        lg:px-8
-        transition-all
-        duration-300
-        ${scrolled ? "pt-3" : "pt-5"}
-      `}
+                fixed
+                top-0
+                left-0
+                right-0
+
+                z-[9999]
+
+                px-4
+                sm:px-6
+                lg:px-8
+
+                transition-all
+                duration-500
+
+                ${scrolled
+          ? "pt-3"
+          : "pt-5"
+        }
+            `}
     >
 
       {/* =====================================================
-          MAIN NAVBAR
-      ===================================================== */}
+                MAIN NAVBAR
+            ====================================================== */}
 
       <div
         className={`
-          max-w-[1400px]
-          mx-auto
-          flex
-          items-center
-          justify-between
-          gap-3
-          lg:gap-5
-          transition-all
-          duration-300
-          ${scrolled
+                    max-w-[1400px]
+                    mx-auto
+
+                    relative
+
+                    flex
+                    items-center
+                    justify-between
+
+                    gap-3
+                    lg:gap-6
+
+                    transition-all
+                    duration-500
+
+                    ${scrolled
             ? "scale-[0.985]"
             : "scale-100"
           }
-        `}
+                `}
       >
 
-
-        {/* ===================================================
-            LOGO
-        =================================================== */}
+        {/* =================================================
+                    LOGO
+                ================================================== */}
 
         <Link
           to="/"
           className="
-            flex
-            items-center
-            gap-2.5
-            bg-white/95
-            backdrop-blur-xl
-            rounded-full
-            border
-            border-black/10
-            shadow-soft
-            px-4
-            py-2.5
-            shrink-0
-            hover:shadow-md
-            transition-shadow
-          "
+                        group
+                        relative
+
+                        flex
+                        items-center
+                        gap-2.5
+
+                        px-3
+                        py-2.5
+                        sm:px-4
+
+                        rounded-full
+
+                        bg-[#F7F6F3]/90
+                        backdrop-blur-2xl
+
+                        border
+                        border-black/[0.08]
+
+                        shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+
+                        shrink-0
+
+                        transition-all
+                        duration-300
+
+                        hover:-translate-y-0.5
+                        hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)]
+                    "
         >
+
+          {/* Logo mark */}
 
           <span
             className="
-              w-8
-              h-8
-              rounded-full
-              bg-[#FF3B30]
-              text-white
-              flex
-              items-center
-              justify-center
-              font-bold
-              text-sm
-            "
+                            relative
+
+                            w-8
+                            h-8
+
+                            rounded-full
+
+                            bg-[#6D001A]
+
+                            text-white
+
+                            flex
+                            items-center
+                            justify-center
+
+                            font-bold
+                            text-sm
+
+                            shadow-[0_5px_15px_rgba(109,0,26,0.25)]
+
+                            overflow-hidden
+                        "
           >
-            S
+
+            <span
+              className="
+                                absolute
+                                inset-0
+
+                                bg-white/10
+
+                                translate-y-full
+
+                                group-hover:translate-y-0
+
+                                transition-transform
+                                duration-300
+                            "
+            />
+
+            <span className="relative z-10">
+              S
+            </span>
+
           </span>
 
 
+          {/* Logo text */}
+
           <span
             className="
-              text-sm
-              font-extrabold
-              tracking-tight
-              text-[#111111]
-              hidden
-              sm:block
-            "
+                            hidden
+                            sm:block
+
+                            text-sm
+                            font-black
+
+                            tracking-[-0.03em]
+
+                            text-[#171717]
+                        "
           >
             SPYGRAPHIX
           </span>
@@ -311,31 +369,36 @@ export function Navbar() {
         </Link>
 
 
-        {/* ===================================================
-            DESKTOP NAVIGATION
-        =================================================== */}
+        {/* =================================================
+                    DESKTOP NAVIGATION
+                ================================================== */}
 
         <nav
           className="
-            hidden
-            lg:flex
-            items-center
-            gap-1
-            bg-white/90
-            backdrop-blur-xl
-            px-2
-            py-2
-            rounded-full
-            border
-            border-black/10
-            shadow-soft
-          "
+                        hidden
+                        lg:flex
+
+                        items-center
+
+                        gap-1
+
+                        p-1.5
+
+                        rounded-full
+
+                        bg-[#F7F6F3]/85
+                        backdrop-blur-2xl
+
+                        border
+                        border-black/[0.08]
+
+                        shadow-[0_8px_30px_rgba(0,0,0,0.07)]
+                    "
         >
 
-
           {/* =================================================
-              SERVICES
-          ================================================= */}
+                        SERVICES
+                    ================================================== */}
 
           <div
             ref={servicesRef}
@@ -344,59 +407,76 @@ export function Navbar() {
 
             <button
               type="button"
+
               onClick={() =>
                 setServicesDropdownOpen(
-                  (previous) =>
-                    !previous
+                  previous => !previous
                 )
               }
+
               onMouseEnter={() =>
                 setServicesDropdownOpen(true)
               }
+
               className={`
-                px-4
-                py-2.5
-                text-[11px]
-                font-semibold
-                uppercase
-                tracking-[0.14em]
-                rounded-full
-                transition-all
-                flex
-                items-center
-                gap-1.5
-                whitespace-nowrap
-                cursor-pointer
-                ${location.pathname.startsWith(
-                "/services"
-              )
-                  ? "bg-[#111111] text-white"
-                  : "text-[#111111] hover:text-[#FF3B30]"
+                                group
+
+                                relative
+
+                                flex
+                                items-center
+                                gap-1.5
+
+                                px-4
+                                py-2.5
+
+                                rounded-full
+
+                                text-[10px]
+
+                                font-bold
+
+                                uppercase
+
+                                tracking-[0.15em]
+
+                                transition-all
+                                duration-300
+
+                                whitespace-nowrap
+
+                                cursor-pointer
+
+                                ${location.pathname.startsWith("/services")
+                  ? "bg-[#171717] text-white shadow-md"
+                  : "text-[#222] hover:bg-black/[0.045] hover:text-[#6D001A]"
                 }
-              `}
+                            `}
             >
 
               Services
 
               <ChevronDown
                 className={`
-                  w-3.5
-                  h-3.5
-                  transition-transform
-                  duration-200
-                  ${servicesDropdownOpen
+                                    w-3.5
+                                    h-3.5
+
+                                    transition-transform
+                                    duration-300
+
+                                    ${servicesDropdownOpen
                     ? "rotate-180"
                     : ""
                   }
-                `}
+                                `}
               />
 
             </button>
 
 
             {/* =================================================
-                DESKTOP SERVICES DROPDOWN
-            ================================================= */}
+                            SERVICES DROPDOWN
+                        ================================================== */}
 
             <AnimatePresence>
 
@@ -405,83 +485,131 @@ export function Navbar() {
                 <motion.div
                   initial={{
                     opacity: 0,
-                    y: 8,
-                    scale: 0.98,
+                    y: 10,
+                    scale: 0.96,
                   }}
+
                   animate={{
                     opacity: 1,
                     y: 0,
                     scale: 1,
                   }}
+
                   exit={{
                     opacity: 0,
-                    y: 8,
-                    scale: 0.98,
+                    y: 10,
+                    scale: 0.96,
                   }}
+
                   transition={{
-                    duration: 0.18,
+                    duration: 0.2,
                     ease: "easeOut",
                   }}
+
                   onMouseEnter={() =>
                     setServicesDropdownOpen(true)
                   }
+
                   className="
-                    absolute
-                    top-[calc(100%+10px)]
-                    left-1/2
-                    -translate-x-1/2
-                    w-[360px]
-                    bg-white
-                    rounded-2xl
-                    border
-                    border-black/10
-                    shadow-2xl
-                    overflow-hidden
-                    z-[10000]
-                  "
+                                        absolute
+
+                                        top-[calc(100%+12px)]
+
+                                        left-1/2
+                                        -translate-x-1/2
+
+                                        w-[380px]
+
+                                        overflow-hidden
+
+                                        rounded-[24px]
+
+                                        bg-[#F7F6F3]
+
+                                        border
+                                        border-black/[0.08]
+
+                                        shadow-[0_30px_80px_rgba(0,0,0,0.16)]
+
+                                        z-[10000]
+                                    "
                 >
 
-                  {/* Dropdown Header */}
+                  {/* Dropdown header */}
 
                   <div
                     className="
-                      px-5
-                      py-4
-                      border-b
-                      border-black/10
-                      bg-[#FAFAFA]
-                    "
+                                            relative
+                                            overflow-hidden
+
+                                            px-5
+                                            py-5
+
+                                            bg-[#171717]
+
+                                            text-white
+                                        "
                   >
+
+                    {/* Decorative circle */}
 
                     <div
                       className="
-                        flex
-                        items-center
-                        justify-between
-                      "
+                                                absolute
+
+                                                -right-8
+                                                -top-12
+
+                                                w-32
+                                                h-32
+
+                                                rounded-full
+
+                                                bg-[#6D001A]/60
+
+                                                blur-2xl
+                                            "
+                    />
+
+                    <div
+                      className="
+                                                relative
+                                                z-10
+
+                                                flex
+                                                items-center
+                                                justify-between
+                                            "
                     >
 
                       <div>
 
                         <p
                           className="
-                            text-[10px]
-                            uppercase
-                            tracking-[0.18em]
-                            font-bold
-                            text-[#FF3B30]
-                            mb-1
-                          "
+                                                        text-[9px]
+
+                                                        uppercase
+
+                                                        tracking-[0.25em]
+
+                                                        font-bold
+
+                                                        text-[#D98A9C]
+
+                                                        mb-1.5
+                                                    "
                         >
                           What we do
                         </p>
 
                         <p
                           className="
-                            text-sm
-                            font-bold
-                            text-[#111111]
-                          "
+                                                        text-lg
+
+                                                        font-bold
+
+                                                        tracking-tight
+                                                    "
                         >
                           Creative Services
                         </p>
@@ -489,82 +617,148 @@ export function Navbar() {
                       </div>
 
 
-                      <Sparkles
+                      <div
                         className="
-                          w-5
-                          h-5
-                          text-[#FF3B30]
-                        "
-                      />
+                                                    w-10
+                                                    h-10
+
+                                                    rounded-full
+
+                                                    bg-white/10
+                                                    backdrop-blur-md
+
+                                                    border
+                                                    border-white/10
+
+                                                    flex
+                                                    items-center
+                                                    justify-center
+                                                "
+                      >
+
+                        <Sparkles
+                          className="
+                                                        w-4
+                                                        h-4
+
+                                                        text-[#D98A9C]
+                                                    "
+                        />
+
+                      </div>
 
                     </div>
 
                   </div>
 
 
-                  {/* Services List */}
+                  {/* Services */}
 
                   <div
                     className="
-                      p-2
-                      max-h-[420px]
-                      overflow-y-auto
-                    "
+                                            p-2.5
+
+                                            max-h-[420px]
+
+                                            overflow-y-auto
+                                        "
                   >
 
                     {desktopServices.map(
-                      (service) => (
+                      service => (
 
                         <Link
                           key={service.id}
+
                           to={`/services/${service.slug}`}
+
                           onClick={() =>
                             setServicesDropdownOpen(false)
                           }
+
                           className="
-                            group
-                            flex
-                            items-center
-                            justify-between
-                            gap-3
-                            px-4
-                            py-3
-                            rounded-xl
-                            hover:bg-[#F6F6F6]
-                            transition-colors
-                          "
+                                                        group
+
+                                                        flex
+                                                        items-center
+                                                        justify-between
+
+                                                        gap-3
+
+                                                        px-4
+                                                        py-3.5
+
+                                                        rounded-[15px]
+
+                                                        hover:bg-white
+
+                                                        transition-all
+                                                        duration-200
+                                                    "
                         >
 
                           <div
                             className="
-                              flex
-                              items-center
-                              gap-3
-                              min-w-0
-                            "
+                                                            flex
+                                                            items-center
+                                                            gap-3
+
+                                                            min-w-0
+                                                        "
                           >
 
                             <span
                               className="
-                                w-1.5
-                                h-1.5
-                                rounded-full
-                                bg-[#FF3B30]
-                                opacity-40
-                                group-hover:opacity-100
-                                transition-opacity
-                                shrink-0
-                              "
-                            />
+                                                                relative
+
+                                                                w-7
+                                                                h-7
+
+                                                                rounded-full
+
+                                                                bg-[#6D001A]/[0.07]
+
+                                                                flex
+                                                                items-center
+                                                                justify-center
+
+                                                                shrink-0
+                                                            "
+                            >
+
+                              <span
+                                className="
+                                                                    w-1.5
+                                                                    h-1.5
+
+                                                                    rounded-full
+
+                                                                    bg-[#6D001A]
+
+                                                                    transition-transform
+                                                                    duration-200
+
+                                                                    group-hover:scale-125
+                                                                "
+                              />
+
+                            </span>
+
 
                             <span
                               className="
-                                text-sm
-                                text-[#333333]
-                                group-hover:text-[#FF3B30]
-                                transition-colors
-                                truncate
-                              "
+                                                                text-sm
+
+                                                                font-medium
+
+                                                                text-[#333]
+
+                                                                group-hover:text-[#6D001A]
+
+                                                                transition-colors
+
+                                                                truncate
+                                                            "
                             >
                               {service.title}
                             </span>
@@ -574,15 +768,20 @@ export function Navbar() {
 
                           <ArrowUpRight
                             className="
-                              w-3.5
-                              h-3.5
-                              text-[#999999]
-                              group-hover:text-[#FF3B30]
-                              group-hover:translate-x-0.5
-                              group-hover:-translate-y-0.5
-                              transition-all
-                              shrink-0
-                            "
+                                                            w-3.5
+                                                            h-3.5
+
+                                                            text-black/25
+
+                                                            group-hover:text-[#6D001A]
+
+                                                            group-hover:translate-x-0.5
+                                                            group-hover:-translate-y-0.5
+
+                                                            transition-all
+
+                                                            shrink-0
+                                                        "
                           />
 
                         </Link>
@@ -593,38 +792,54 @@ export function Navbar() {
                   </div>
 
 
-                  {/* View All */}
+                  {/* View all */}
 
                   <div
                     className="
-                      border-t
-                      border-black/10
-                      p-3
-                    "
+                                            p-3
+
+                                            border-t
+                                            border-black/[0.07]
+                                        "
                   >
 
                     <Link
                       to="/services"
+
                       onClick={() =>
                         setServicesDropdownOpen(false)
                       }
+
                       className="
-                        flex
-                        items-center
-                        justify-between
-                        w-full
-                        px-4
-                        py-3
-                        rounded-xl
-                        bg-[#111111]
-                        text-white
-                        text-xs
-                        font-bold
-                        uppercase
-                        tracking-widest
-                        hover:bg-[#FF3B30]
-                        transition-colors
-                      "
+                                                group
+
+                                                flex
+                                                items-center
+                                                justify-between
+
+                                                w-full
+
+                                                px-4
+                                                py-3.5
+
+                                                rounded-[15px]
+
+                                                bg-[#171717]
+
+                                                text-white
+
+                                                text-[9px]
+
+                                                font-bold
+
+                                                uppercase
+
+                                                tracking-[0.18em]
+
+                                                hover:bg-[#6D001A]
+
+                                                transition-colors
+                                            "
                     >
 
                       <span>
@@ -633,9 +848,14 @@ export function Navbar() {
 
                       <ArrowUpRight
                         className="
-                          w-4
-                          h-4
-                        "
+                                                    w-4
+                                                    h-4
+
+                                                    transition-transform
+
+                                                    group-hover:translate-x-1
+                                                    group-hover:-translate-y-1
+                                                "
                       />
 
                     </Link>
@@ -652,106 +872,144 @@ export function Navbar() {
 
 
           {/* =================================================
-              WORK
-          ================================================= */}
+                        WORK
+                    ================================================== */}
 
           <Link
             to="/portfolio"
+
             className={`
-              px-4
-              py-2.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.14em]
-              rounded-full
-              transition-all
-              whitespace-nowrap
-              ${location.pathname === "/portfolio"
-                ? "bg-[#111111] text-white"
-                : "text-[#111111] hover:text-[#FF3B30]"
+                            px-4
+                            py-2.5
+
+                            rounded-full
+
+                            text-[10px]
+
+                            font-bold
+
+                            uppercase
+
+                            tracking-[0.15em]
+
+                            transition-all
+                            duration-300
+
+                            whitespace-nowrap
+
+                            ${isActive("/portfolio")
+                ? "bg-[#171717] text-white shadow-md"
+                : "text-[#222] hover:bg-black/[0.045] hover:text-[#6D001A]"
               }
-            `}
+                        `}
           >
             Work
           </Link>
 
 
           {/* =================================================
-              CULTURE
-          ================================================= */}
+                        CULTURE
+                    ================================================== */}
 
           <Link
             to="/about"
+
             className={`
-              px-4
-              py-2.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.14em]
-              rounded-full
-              transition-all
-              whitespace-nowrap
-              ${location.pathname === "/about"
-                ? "bg-[#111111] text-white"
-                : "text-[#111111] hover:text-[#FF3B30]"
+                            px-4
+                            py-2.5
+
+                            rounded-full
+
+                            text-[10px]
+
+                            font-bold
+
+                            uppercase
+
+                            tracking-[0.15em]
+
+                            transition-all
+                            duration-300
+
+                            whitespace-nowrap
+
+                            ${isActive("/about")
+                ? "bg-[#171717] text-white shadow-md"
+                : "text-[#222] hover:bg-black/[0.045] hover:text-[#6D001A]"
               }
-            `}
+                        `}
           >
             Culture
           </Link>
 
 
           {/* =================================================
-              JOURNAL
-          ================================================= */}
+                        JOURNAL
+                    ================================================== */}
 
           <Link
             to="/blog"
+
             className={`
-              px-4
-              py-2.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.14em]
-              rounded-full
-              transition-all
-              whitespace-nowrap
-              ${location.pathname.startsWith(
-              "/blog"
-            )
-                ? "bg-[#111111] text-white"
-                : "text-[#111111] hover:text-[#FF3B30]"
+                            px-4
+                            py-2.5
+
+                            rounded-full
+
+                            text-[10px]
+
+                            font-bold
+
+                            uppercase
+
+                            tracking-[0.15em]
+
+                            transition-all
+                            duration-300
+
+                            whitespace-nowrap
+
+                            ${location.pathname.startsWith("/blog")
+                ? "bg-[#171717] text-white shadow-md"
+                : "text-[#222] hover:bg-black/[0.045] hover:text-[#6D001A]"
               }
-            `}
+                        `}
           >
             Journal
           </Link>
 
 
           {/* =================================================
-              CONTACT
-          ================================================= */}
+                        CONTACT
+                    ================================================== */}
 
           <Link
             to="/contact"
+
             className={`
-              px-4
-              py-2.5
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[0.14em]
-              rounded-full
-              transition-all
-              whitespace-nowrap
-              ${location.pathname === "/contact"
-                ? "bg-[#111111] text-white"
-                : "text-[#111111] hover:text-[#FF3B30]"
+                            px-4
+                            py-2.5
+
+                            rounded-full
+
+                            text-[10px]
+
+                            font-bold
+
+                            uppercase
+
+                            tracking-[0.15em]
+
+                            transition-all
+                            duration-300
+
+                            whitespace-nowrap
+
+                            ${isActive("/contact")
+                ? "bg-[#171717] text-white shadow-md"
+                : "text-[#222] hover:bg-black/[0.045] hover:text-[#6D001A]"
               }
-            `}
+                        `}
           >
             Contact
           </Link>
@@ -759,26 +1017,27 @@ export function Navbar() {
         </nav>
 
 
-        {/* ===================================================
-            DESKTOP RIGHT ACTIONS
-        =================================================== */}
+        {/* =================================================
+                    RIGHT ACTIONS
+                ================================================== */}
 
         <div
           className="
-            hidden
-            lg:flex
-            items-center
-            gap-2
-            shrink-0
-          "
+                        hidden
+                        lg:flex
+
+                        items-center
+                        gap-2
+
+                        shrink-0
+                    "
         >
 
-          {/* -------------------------------------------------
-              LOGIN
-          ------------------------------------------------- */}
+          {/* Login */}
 
           <button
             type="button"
+
             onClick={() =>
               openAuthModal(
                 user
@@ -786,57 +1045,69 @@ export function Navbar() {
                   : "login"
               )
             }
+
             className="
-              px-4
-              py-2.5
-              bg-white/90
-              backdrop-blur-xl
-              rounded-full
-              border
-              border-black/10
-              text-[#111111]
-              hover:bg-[#111111]
-              hover:text-white
-              transition-all
-              shadow-soft
-              flex
-              items-center
-              justify-center
-              gap-2
-              cursor-pointer
-              max-w-[150px]
-            "
-            title={
-              user
-                ? `Profile (${user.name})`
-                : "Client Login / Register"
-            }
+                            group
+
+                            flex
+                            items-center
+                            justify-center
+                            gap-2
+
+                            px-4
+                            py-2.5
+
+                            rounded-full
+
+                            bg-[#F7F6F3]/90
+                            backdrop-blur-xl
+
+                            border
+                            border-black/[0.08]
+
+                            shadow-[0_8px_25px_rgba(0,0,0,0.06)]
+
+                            text-[#171717]
+
+                            hover:bg-[#171717]
+                            hover:text-white
+
+                            transition-all
+                            duration-300
+
+                            cursor-pointer
+
+                            max-w-[150px]
+                        "
           >
 
             {user?.avatar ? (
 
               <img
                 src={user.avatar}
-                alt={
-                  user.name || "User"
-                }
+                alt={user.name || "User"}
+
                 className="
-                  w-5
-                  h-5
-                  rounded-full
-                  object-cover
-                  shrink-0
-                "
+                                    w-5
+                                    h-5
+
+                                    rounded-full
+
+                                    object-cover
+
+                                    shrink-0
+                                "
               />
 
             ) : (
 
               <User
                 className="
-                  w-4
-                  h-4
-                  shrink-0
-                "
+                                    w-4
+                                    h-4
+
+                                    shrink-0
+                                "
               />
 
             )}
@@ -844,45 +1115,68 @@ export function Navbar() {
 
             <span
               className="
-                text-[10px]
-                font-semibold
-                uppercase
-                tracking-wider
-                truncate
-              "
+                                text-[9px]
+
+                                font-bold
+
+                                uppercase
+
+                                tracking-[0.12em]
+
+                                truncate
+                            "
             >
               {user
                 ? user.name
-                : "Login"}
+                : "Login"
+              }
             </span>
 
           </button>
 
 
-          {/* -------------------------------------------------
-              START PROJECT
-          ------------------------------------------------- */}
+          {/* =================================================
+                        START PROJECT
+                    ================================================== */}
 
           <Link
             to="/contact"
+
             className="
-              px-5
-              py-2.5
-              bg-[#111111]
-              text-white
-              text-[10px]
-              uppercase
-              tracking-[0.14em]
-              rounded-full
-              font-semibold
-              hover:bg-[#FF3B30]
-              transition-all
-              shadow-md
-              flex
-              items-center
-              gap-2
-              whitespace-nowrap
-            "
+                            group
+
+                            flex
+                            items-center
+                            gap-2
+
+                            px-5
+                            py-2.5
+
+                            rounded-full
+
+                            bg-[#6D001A]
+
+                            text-white
+
+                            text-[9px]
+
+                            font-bold
+
+                            uppercase
+
+                            tracking-[0.15em]
+
+                            shadow-[0_8px_25px_rgba(109,0,26,0.25)]
+
+                            hover:bg-[#171717]
+
+                            hover:-translate-y-0.5
+
+                            transition-all
+                            duration-300
+
+                            whitespace-nowrap
+                        "
           >
 
             <span>
@@ -891,9 +1185,14 @@ export function Navbar() {
 
             <ArrowUpRight
               className="
-                w-3.5
-                h-3.5
-              "
+                                w-3.5
+                                h-3.5
+
+                                transition-transform
+
+                                group-hover:translate-x-0.5
+                                group-hover:-translate-y-0.5
+                            "
             />
 
           </Link>
@@ -901,57 +1200,58 @@ export function Navbar() {
         </div>
 
 
-        {/* ===================================================
-            MOBILE MENU BUTTON
-        =================================================== */}
+        {/* =================================================
+                    MOBILE BUTTON
+                ================================================== */}
 
         <button
           type="button"
+
           onClick={() =>
             setMobileMenuOpen(
-              (previous) =>
-                !previous
+              previous => !previous
             )
           }
+
           className="
-            lg:hidden
-            bg-white/95
-            backdrop-blur-xl
-            p-3.5
-            rounded-full
-            border
-            border-black/10
-            shadow-soft
-            text-[#111111]
-            hover:bg-[#111111]
-            hover:text-white
-            transition-all
-            cursor-pointer
-            shrink-0
-          "
+                        lg:hidden
+
+                        bg-[#F7F6F3]/95
+                        backdrop-blur-xl
+
+                        p-3.5
+
+                        rounded-full
+
+                        border
+                        border-black/[0.08]
+
+                        shadow-[0_8px_25px_rgba(0,0,0,0.08)]
+
+                        text-[#171717]
+
+                        hover:bg-[#171717]
+                        hover:text-white
+
+                        transition-all
+
+                        cursor-pointer
+
+                        shrink-0
+                    "
+
           aria-label="Toggle menu"
-          aria-expanded={
-            mobileMenuOpen
-          }
+
+          aria-expanded={mobileMenuOpen}
         >
 
           {mobileMenuOpen ? (
 
-            <X
-              className="
-                w-5
-                h-5
-              "
-            />
+            <X className="w-5 h-5" />
 
           ) : (
 
-            <Menu
-              className="
-                w-5
-                h-5
-              "
-            />
+            <Menu className="w-5 h-5" />
 
           )}
 
@@ -961,9 +1261,8 @@ export function Navbar() {
 
 
       {/* =====================================================
-          MOBILE DRAWER
-          IMPORTANT: OUTSIDE DESKTOP NAV
-      ===================================================== */}
+                MOBILE DRAWER
+            ====================================================== */}
 
       <AnimatePresence>
 
@@ -973,54 +1272,141 @@ export function Navbar() {
             initial={{
               opacity: 0,
               y: -15,
+              scale: 0.98,
             }}
+
             animate={{
               opacity: 1,
               y: 0,
+              scale: 1,
             }}
+
             exit={{
               opacity: 0,
               y: -15,
+              scale: 0.98,
             }}
+
             transition={{
-              duration: 0.2,
+              duration: 0.25,
               ease: "easeOut",
             }}
+
             className="
-              lg:hidden
-              fixed
-              left-4
-              right-4
-              top-[76px]
-              sm:top-[84px]
-              bg-white
-              rounded-3xl
-              border
-              border-black/10
-              shadow-2xl
-              z-[9998]
-              overflow-hidden
-            "
+                            lg:hidden
+
+                            fixed
+
+                            left-4
+                            right-4
+
+                            top-[76px]
+                            sm:top-[84px]
+
+                            bg-[#F7F6F3]
+
+                            rounded-[28px]
+
+                            border
+                            border-black/[0.08]
+
+                            shadow-[0_30px_80px_rgba(0,0,0,0.18)]
+
+                            z-[9998]
+
+                            overflow-hidden
+                        "
           >
 
-            {/* =================================================
-                SCROLLABLE CONTENT
-            ================================================= */}
+            {/* Mobile header */}
 
             <div
               className="
-                max-h-[calc(100vh-120px)]
-                overflow-y-auto
-                p-5
-              "
+                                relative
+                                overflow-hidden
+
+                                px-5
+                                py-5
+
+                                bg-[#171717]
+
+                                text-white
+                            "
+            >
+
+              <div
+                className="
+                                    absolute
+
+                                    -right-12
+                                    -top-16
+
+                                    w-40
+                                    h-40
+
+                                    rounded-full
+
+                                    bg-[#6D001A]
+
+                                    blur-3xl
+
+                                    opacity-60
+                                "
+              />
+
+              <div className="relative z-10">
+
+                <p
+                  className="
+                                        text-[8px]
+
+                                        uppercase
+
+                                        tracking-[0.25em]
+
+                                        text-[#D98A9C]
+
+                                        font-bold
+                                    "
+                >
+                  SPYGRAPHIX
+                </p>
+
+                <p
+                  className="
+                                        mt-1
+
+                                        text-lg
+
+                                        font-bold
+                                    "
+                >
+                  Creative Studio
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* Scrollable */}
+
+            <div
+              className="
+                                max-h-[calc(100vh-145px)]
+
+                                overflow-y-auto
+
+                                p-4
+                            "
             >
 
               <nav
                 className="
-                  flex
-                  flex-col
-                  gap-1
-                "
+                                    flex
+                                    flex-col
+                                    gap-1
+                                "
               >
 
                 {/* HOME */}
@@ -1028,15 +1414,23 @@ export function Navbar() {
                 <Link
                   to="/"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   Home
                 </Link>
@@ -1047,53 +1441,71 @@ export function Navbar() {
                 <Link
                   to="/services"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   Services & Solutions
                 </Link>
 
 
-                {/* MOBILE SERVICES */}
+                {/* SERVICES CHILDREN */}
 
                 <div
                   className="
-                    ml-3
-                    border-l
-                    border-black/10
-                    pl-3
-                    space-y-1
-                  "
+                                        ml-4
+
+                                        pl-3
+
+                                        border-l
+                                        border-[#6D001A]/15
+
+                                        space-y-1
+                                    "
                 >
 
                   {mobileServices.map(
-                    (service) => (
+                    service => (
 
                       <Link
                         key={service.id}
+
                         to={`/services/${service.slug}`}
-                        onClick={
-                          closeMobileMenu
-                        }
+
+                        onClick={closeMobileMenu}
+
                         className="
-                          flex
-                          items-center
-                          justify-between
-                          p-2.5
-                          rounded-lg
-                          text-sm
-                          text-[#555555]
-                          hover:bg-[#F6F6F6]
-                          hover:text-[#FF3B30]
-                          transition-colors
-                        "
+                                                    flex
+                                                    items-center
+                                                    justify-between
+
+                                                    p-3
+
+                                                    rounded-xl
+
+                                                    text-xs
+
+                                                    text-black/55
+
+                                                    hover:bg-white
+                                                    hover:text-[#6D001A]
+
+                                                    transition-colors
+                                                "
                       >
 
                         <span>
@@ -1101,10 +1513,7 @@ export function Navbar() {
                         </span>
 
                         <ArrowUpRight
-                          className="
-                            w-3
-                            h-3
-                          "
+                          className="w-3 h-3"
                         />
 
                       </Link>
@@ -1113,28 +1522,34 @@ export function Navbar() {
                   )}
 
 
-                  {/* VIEW ALL */}
-
                   <Link
                     to="/services"
-                    onClick={
-                      closeMobileMenu
-                    }
+
+                    onClick={closeMobileMenu}
+
                     className="
-                      flex
-                      items-center
-                      justify-between
-                      p-3
-                      mt-2
-                      rounded-lg
-                      text-sm
-                      font-semibold
-                      text-[#111111]
-                      bg-[#F6F6F6]
-                      hover:bg-[#111111]
-                      hover:text-white
-                      transition-colors
-                    "
+                                            flex
+                                            items-center
+                                            justify-between
+
+                                            p-3
+
+                                            mt-1
+
+                                            rounded-xl
+
+                                            bg-[#171717]
+
+                                            text-white
+
+                                            text-xs
+
+                                            font-bold
+
+                                            hover:bg-[#6D001A]
+
+                                            transition-colors
+                                        "
                   >
 
                     <span>
@@ -1142,10 +1557,7 @@ export function Navbar() {
                     </span>
 
                     <ArrowUpRight
-                      className="
-                        w-3.5
-                        h-3.5
-                      "
+                      className="w-3.5 h-3.5"
                     />
 
                   </Link>
@@ -1158,15 +1570,23 @@ export function Navbar() {
                 <Link
                   to="/portfolio"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   Portfolio / Case Studies
                 </Link>
@@ -1177,15 +1597,23 @@ export function Navbar() {
                 <Link
                   to="/about"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   About Agency
                 </Link>
@@ -1196,15 +1624,23 @@ export function Navbar() {
                 <Link
                   to="/blog"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   Journal & Insights
                 </Link>
@@ -1215,15 +1651,23 @@ export function Navbar() {
                 <Link
                   to="/contact"
                   onClick={closeMobileMenu}
+
                   className="
-                    p-3.5
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#111111]
-                    hover:bg-[#F6F6F6]
-                    transition-colors
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#171717]
+
+                                        hover:bg-white
+                                        hover:text-[#6D001A]
+
+                                        transition-colors
+                                    "
                 >
                   Contact Studio
                 </Link>
@@ -1233,27 +1677,35 @@ export function Navbar() {
 
                 <button
                   type="button"
+
                   onClick={() => {
 
                     closeMobileMenu();
-
                     replayLoader();
 
                   }}
+
                   className="
-                    p-3.5
-                    text-left
-                    rounded-xl
-                    font-bold
-                    text-base
-                    text-[#FF3B30]
-                    hover:bg-[#FF3B30]/10
-                    flex
-                    items-center
-                    justify-between
-                    transition-colors
-                    cursor-pointer
-                  "
+                                        p-4
+
+                                        rounded-[15px]
+
+                                        font-bold
+
+                                        text-sm
+
+                                        text-[#6D001A]
+
+                                        hover:bg-[#6D001A]/[0.06]
+
+                                        flex
+                                        items-center
+                                        justify-between
+
+                                        transition-colors
+
+                                        cursor-pointer
+                                    "
                 >
 
                   <span>
@@ -1262,10 +1714,11 @@ export function Navbar() {
 
                   <Play
                     className="
-                      w-5
-                      h-5
-                      fill-current
-                    "
+                                            w-4
+                                            h-4
+
+                                            fill-current
+                                        "
                   />
 
                 </button>
@@ -1274,50 +1727,68 @@ export function Navbar() {
 
 
               {/* =================================================
-                  MOBILE CTA
-              ================================================= */}
+                                MOBILE CTA
+                            ================================================== */}
 
               <div
                 className="
-                  mt-4
-                  pt-4
-                  border-t
-                  border-black/10
-                "
+                                    mt-3
+                                    pt-4
+
+                                    border-t
+                                    border-black/[0.07]
+                                "
               >
 
                 <Link
                   to="/contact"
-                  onClick={
-                    closeMobileMenu
-                  }
+
+                  onClick={closeMobileMenu}
+
                   className="
-                    w-full
-                    bg-[#111111]
-                    text-white
-                    py-4
-                    rounded-2xl
-                    text-center
-                    text-sm
-                    font-bold
-                    uppercase
-                    tracking-wider
-                    flex
-                    items-center
-                    justify-center
-                    gap-2
-                    hover:bg-[#FF3B30]
-                    transition-colors
-                  "
+                                        group
+
+                                        w-full
+
+                                        bg-[#6D001A]
+
+                                        text-white
+
+                                        py-4
+
+                                        rounded-[18px]
+
+                                        text-xs
+
+                                        font-bold
+
+                                        uppercase
+
+                                        tracking-[0.15em]
+
+                                        flex
+                                        items-center
+                                        justify-center
+                                        gap-2
+
+                                        hover:bg-[#171717]
+
+                                        transition-colors
+                                    "
                 >
 
                   Book a Creative Call
 
                   <ArrowUpRight
                     className="
-                      w-4
-                      h-4
-                    "
+                                            w-4
+                                            h-4
+
+                                            transition-transform
+
+                                            group-hover:translate-x-0.5
+                                            group-hover:-translate-y-0.5
+                                        "
                   />
 
                 </Link>
